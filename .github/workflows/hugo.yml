@@ -62,9 +62,9 @@ jobs:
         uses: horochx/deploy-via-scp@1.1.0
         with:
           # Local file path
-          local: ./public
+          local: public
           # Remote file path
-          remote: /var/www
+          remote: /var/www/vsantele
           # Remote server address
           host: ${{ secrets.HOST }}
           # Remote server port
