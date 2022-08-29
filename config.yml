@@ -1,0 +1,65 @@
+baseURL: "https://vsantele.dev/"
+tite: "Victor Santelé"
+languageCode: "fr-be"
+title: "Victor Santelé"
+theme: "hugo-coder"
+defaultcontentlanguage: "fr"
+
+paginate: 20
+
+pygmentsstyle: "bw"
+pygmentscodefences: true
+pygmentscodefencesguesssyntax: true
+
+params:
+  author: Victor Santelé
+  info: "Développeur belge étudiant à UNamur"
+  description: "Site personnel de Victor Santelé regroupant ses projets et ses articles"
+  keywords: "belge,blog,projets,personal,developpeur,data,js"
+  gravatar: "victor.santele@gmail.com"
+
+  favicon_32: "/images/favicon-32x32.png"
+  favicon_16: "/images/favicon-16x16.png"
+
+  since: 2022
+
+  enableTwemoji: true
+
+  colorScheme: auto
+  hidecolorsschemetoggle: false
+
+  social:
+    - name: Github
+      icon: fa fa-github fa-2x
+      weight: 1
+      url: "https://github.com/vsantele"
+    - name: Twitter
+      icon: fa fa-twitter fa-2x
+      weight: 2
+      url: "https://twitter.com/vsantele"
+    - name: "LinkedIn"
+      icon: fa fa-linkedin fa-2x
+      weight: 3
+      url: "https://www.linkedin.com/in/victor-santele/"
+
+  matomo:
+    siteID: 1
+    serverURL: https://matomo.vsantele.dev/
+
+taxonomies:
+  category: categories
+  tag: tags
+  author: authors
+  series: series
+
+menu:
+  main:
+    - name: Projects
+      weight: 1
+      url: projects/
+    - name: Blog
+      weight: 2
+      url: posts/
+    - name: About
+      weight: 3
+      url: about/
