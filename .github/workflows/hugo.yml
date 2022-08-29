@@ -58,6 +58,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
+          path: public
       - name: deploy-via-scp
         uses: horochx/deploy-via-scp@1.1.0
         with:
