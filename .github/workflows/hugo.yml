@@ -49,14 +49,21 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Upload artifact
-        uses: appleboy/scp-action@master
-        env:
-          HOST: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PORT: ${{ secrets.PORT }}
-          KEY: ${{ secrets.SSHKEY }}
+      - name: deploy-via-scp
+        uses: horochx/deploy-via-scp@1.1.0
         with:
-          source: "./public"
-          target: "/var/www/test"
+          # Local file path
+          local: ./public
+          # Remote file path
+          remote: /var/www
+          # Remote server address
+          host: ${{ secrets.HOST }}
+          # Remote server port
+          port: ${{ secrets.PORT }}
+          # Remote server user
+          user: ${{ secrets.USERNAME }}
+          # Remote server private key
+          key: ${{ secrets.SSHKEY }}
+          # Ensure the existance of the remote file path
+          ensureRemote: true
 
