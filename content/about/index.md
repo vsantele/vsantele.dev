@@ -1,8 +1,9 @@
 ---
 title: About Me
-date: 2022-08-28T21:12:04+02:00
-draft: true
-lastmod: 2022-08-28T19:14:11.554Z
+date: 2022-08-29T17:11:02.708Z
+draft: false
+lastmod: 2022-08-29T17:12:29.560Z
+description: Victor Santelé, Analyse-développeur
 ---
 
 Je me présente, Victor Santelé, Analyse-développeur diplômé à l'Henallux.
