@@ -26,7 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.101.0
-      BASE_URL: vsantele.dev
     steps:
       - name: Install Hugo CLI
         run: |
@@ -43,8 +42,7 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
-            --minify \
-            --baseURL "${{ env.BASE_URL }}/"
+            --minify
       - name: Upload build
         uses: actions/upload-artifact@v3
         with:
