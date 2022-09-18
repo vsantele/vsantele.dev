@@ -1,6 +1,7 @@
 {
-  "frontMatter.content.autoUpdateDate": true,
-  "frontMatter.framework.startCommand": "hugo server -D",
-  "frontMatter.preview.host": "http://localhost:1313",
-  "[markdown]": {}
+  "[markdown]": {
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  }
 }

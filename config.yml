@@ -14,7 +14,7 @@ pygmentscodefencesguesssyntax: true
 params:
   author: Victor Santelé
   info: "Développeur belge étudiant à UNamur"
-  description: "Site personnel de Victor Santelé regroupant ses projets et ses articles"
+  description: "Site personnel de Victor Santelé regroupant projets et articles"
   keywords: "belge,blog,projets,personal,developpeur,data,js"
   gravatar: "victor.santele@gmail.com"
 
@@ -44,7 +44,10 @@ params:
 
   matomo:
     siteID: 1
-    serverURL: https://matomo.vsantele.dev/
+    serverURL: matomo.vsantele.dev
+
+  customCSS:
+    - "css/custom.css"
 
 taxonomies:
   category: categories
@@ -63,3 +66,7 @@ menu:
     - name: About
       weight: 3
       url: about/
+
+permalinks:
+  posts: /posts/:year/:month/:title/
+  projets: /projets/:year/:month/:title/
