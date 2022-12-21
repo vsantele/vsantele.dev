@@ -2,7 +2,7 @@
 title: Setup son environnement de dev pour les Azure Functions
 date: 2022-12-21
 draft: false
-lastmod: 2022-12-21T20:57:55.363Z
+lastmod: 2022-12-21T21:22:58.758Z
 description: Setup son environnement de développement pour les Azure Functions. Les
   extensions et logiciels à avoir avec les bons settings.
 slug: setup-son-environnement-de-dev-pour-les-azure-functions
@@ -15,10 +15,10 @@ categories:
   - Astuces
   - Azure Functions
 images:
-  - /img/azure-functions-vscode-corgi.png
+  - /img/azure-functions-vscode-corgi.webp
 ---
 
-{{< figure src="/img/azure-functions-vscode-corgi.png" width="400" >}}
+{{< figure src="/img/azure-functions-vscode-corgi.webp" width="400" >}}
 Aujourd'hui, on va voir comment setup un environnement de développement pour les Azure Functions. Et plus spécialement sur Visual Studio Code.
 Ce guide est conçu pour un environnement Windows, mais la plupart des étapes sont valables pour un environnement Linux.
 
