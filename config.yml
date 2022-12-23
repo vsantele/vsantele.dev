@@ -57,9 +57,9 @@ taxonomies:
 
 menu:
   main:
-    - name: Projects
-      weight: 1
-      url: projects/
+    # - name: Projects
+    #   weight: 1
+    #   url: projects/
     - name: Blog
       weight: 2
       url: posts/
