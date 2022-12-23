@@ -1,8 +1,8 @@
 ---
 title: Setup son environnement de dev pour les Azure Functions
-date: 2022-12-21
+date: 2022-12-23
 draft: false
-lastmod: 2022-12-21T21:22:58.758Z
+lastmod: 2022-12-23T10:16:36.350Z
 description: Setup son environnement de développement pour les Azure Functions. Les
   extensions et logiciels à avoir avec les bons settings.
 slug: setup-son-environnement-de-dev-pour-les-azure-functions
@@ -15,11 +15,11 @@ categories:
   - Astuces
   - Azure Functions
 images:
-  - /img/azure-functions-vscode-corgi.webp
+  - /2022/12/Azure-Functions-Vscode-Corgi.webp
 ---
 
-{{< figure src="/img/azure-functions-vscode-corgi.webp" width="400" >}}
-Aujourd'hui, on va voir comment setup un environnement de développement pour les Azure Functions. Et plus spécialement sur Visual Studio Code.
+{{< figure src="/img/2022/12/Azure-Functions-Vscode-Corgi.webp" width="400" >}}
+Aujourd'hui, on va voir comment setup un environnement de développement pour les Azure Functions. Plus spécialement sur Visual Studio Code.
 Ce guide est conçu pour un environnement Windows, mais la plupart des étapes sont valables pour un environnement Linux.
 
 Je vais prochainement faire un article sur comment j'ai configuré mon VS Code de manière générale.
@@ -35,7 +35,9 @@ Je vais prochainement faire un article sur comment j'ai configuré mon VS Code d
 - [Les logiciels utiles](#les-logiciels-utiles)
   - [1. Azure Storage Explorer](#1-azure-storage-explorer)
   - [2. Azure Cosmos DB Emulator](#2-azure-cosmos-db-emulator)
+- [Comment démarrer ?](#comment-démarrer-)
 - [Conclusion](#conclusion)
+- [Liens utiles](#liens-utiles)
 
 ## Prérequis
 
@@ -54,13 +56,13 @@ Grâce a à elle, vous pouvez générer vos projets en choisissant votre langage
 
 Vous pouvez gérer vos projets déployés sur Azure directement depuis VSCode. Par exemple, voir les logs en temps réel, déployer une nouvelle version, gérer les slots, les paramètres, exécuter des fonctions manuellement (pratique lors des triggers `timer`), etc.
 
-{{< figure src="/img/Azure-Functions-Extension.png" caption="L'extension Azure Functions" >}}
+{{< figure src="/img/2022/12/Azure-Functions-Extension.png" caption="L'extension Azure Functions" >}}
 
 ### 2. Azurite
 
 Les Azures fonctions ont besoins d'un storage account pour fonctionner. Pour faire du développement en local, on va utiliser [Azurite](https://marketplace.visualstudio.com/items?itemName=Azurite.azurite) qui permet d'en émuler un directement sur son pc.
 
-Azurite créer un "storage account" par workspace. C'est-à-dire que vous ne devez pas vous soucier de collision entre vos différents projets.
+Azurite crée un "storage account" par workspace. C'est-à-dire que vous ne devez pas vous soucier de collision entre vos différents projets.
 
 Vous pouvez aussi installer Azurite en tant que package NPM grâce à la commande suivante :
 
@@ -69,12 +71,12 @@ npm install -g azurite
 yarn global add azurite
 {{< /highlight >}}
 
-Une petite astuce pour VS Code : modifiez le répertoire où azurite va stocker ses fichiers pour gérer le stockage. Par défaut, il va créer différents dossiers et fichiers json à la racine du workspace mais c'est pas très propre et ça fait des chemins à rajouter dans sont `.gitignore` (vous n'avez aucun intérêt à versionnier ces fichiers).
+Une petite astuce pour VS Code : modifiez le répertoire dans lequel azurite va stocker ses fichiers pour gérer le stockage. Par défaut, il va créer différents dossiers et fichiers json à la racine du workspace mais ce n'est pas très propre et ça rajoute des chemins dans son `.gitignore` (vous n'avez aucun intérêt à versionner ces fichiers).
 
 Pour cela, il suffit de modifier le paramètre `azurite.location` dans les paramètres de VS Code et de mettre un nom de dossier de votre choix. Personnellement, j'aime bien `.azurite`.
 Et si vous voulez que tout le monde dans le projet respecte cette règle, vous pouvez aussi ajouter ce paramètre dans le fichier `settings.json` de votre workspace.
 
-{{< figure src="/img/Azurite-location.png" caption="Paramètre d'azurite pour sélectionner le dossier racine. valeur: .azurite" >}}
+{{< figure src="/img/2022/12/Azurite-location.png" caption="Paramètre d'azurite pour sélectionner le dossier racine. valeur: .azurite" >}}
 
 {{< notice tip >}}
 Vérifiez que votre projet utilise bien le compte de stockage local. Pour cela, il faut que le paramètre `AzureWebJobsStorage` dans le fichier `local.settings.json` pointe bien vers `UseDevelopmentStorage=true`. (Cet endpoint est valable également pour avoir accès à d'autres containers dans le compte)
@@ -84,7 +86,7 @@ Vérifiez que votre projet utilise bien le compte de stockage local. Pour cela, 
 
 ### 1. Azure Storage Explorer
 
-Azure Storage Explorer permet de naviguer dans nos différents storage accounts, que ce soit celui émuler par Azurite ou bien un vrai sur Azure.
+Azure Storage Explorer permet de naviguer dans nos différents storage accounts, que ce soit celui émulé par Azurite ou bien un vrai sur Azure.
 
 Vous pouvez le télécharger [ici](https://azure.microsoft.com/fr-fr/features/storage-explorer/) ou bien via winget:
 
@@ -94,7 +96,7 @@ winget install Microsoft.AzureStorageExplorer
 
 ### 2. Azure Cosmos DB Emulator
 
-Ce n'est pas une obligation pour débuter dans les Azure fonctions, mais souvent j'utilise CosmosDB en serverless pour gérer mes données à stocker dans mes projets. Ça fonctionne un peu comme azurite, sauf que c'est un serveur "global" pour le PC. Mais on peut créer plusieurs bases de données et containers, donc ça ne pose pas trop de soucis.
+Ce n'est pas une obligation pour débuter dans les Azure fonctions, mais souvent j'utilise CosmosDB en serverless pour gérer mes données à stocker dans mes projets. Ça fonctionne un peu comme azurite, cependant c'est un serveur "global" pour le PC. Mais on peut créer plusieurs bases de données et containers, donc ça ne pose pas trop de problèmes.
 
 Vous pouvez le télécharger [ici](https://docs.microsoft.com/fr-fr/azure/cosmos-db/local-emulator?tabs=ssl-netstd21#download-and-install-the-emulator) ou bien avec winget:
 
@@ -128,10 +130,28 @@ Pour Cassandra et Gremlin, il faut installer des composants supplémentaires. To
 Changer d'API supprimera toutes les données existantes dans les bases de données.
 {{< /notice >}}
 
+## Comment démarrer ?
+
+Maintenant que vous avez tous les outils, il faut se lancer. Pour cela, rien de plus simple. Il suffit d'aller dans l'onglet "Azure" de VS Code et de cliquer sur l'icône "Create Functions" et de vous laisser guider.
+
+{{< figure src="/img/2022/12/Vscode-Create-Functions.png" caption="Créer un projet" >}}
+
+Une fois le projet créé, il ne faut pas oublier de lancer l'émulateur "Azurite". Pour cela, il suffit de faire faire `F1` et chercher `Azurite: Start`. (Vérifiez bien que `AzureWebJobsStorage` est bien égal à `UseDevelopmentStorage=true`)
+
+{{< figure src="/img/2022/12/Azurite-Start.png" caption="Lancer Azurite" >}}
+
+Vscode génère automatiquement une série de tâches pour vous aider à gérer votre projet. Pour lancer vos fonctions en local, vous pouvez utiliser la tâche `func: host start`.
+
 ## Conclusion
 
-C'était un petit article rapide, mais que j'espère efficace. Vous avez maintenant tous les outils pour bien commencer le développement de vos azure fonction en local.
+Vous voilà paré pour commencer à développer vos fonctions Azure ! Par défaut, il n'y a pas moyen de faire de "hot reloading" mais des astuces existent suivant les langages. Je ferai certainement un article sur le sujet quand j'aurai tout ce qu'il faut.
 
 À la prochaine pour d'autres articles et astuces !
 
 PS : L'artwork au début a été généré par Dall-E avec un petit edit de ma part pour les logos.
+
+## Liens utiles
+
+- [Azure Functions](https://learn.microsoft.com/fr-be/azure/azure-functions/functions-get-started)
+- [Triggers et Bindings](https://learn.microsoft.com/fr-be/azure/azure-functions/functions-triggers-bindings#supported-bindings)
+- [Bonnes Pratiques](https://docs.microsoft.com/fr-be/azure/azure-functions/functions-best-practices)
