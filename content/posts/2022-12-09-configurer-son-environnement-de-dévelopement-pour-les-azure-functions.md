@@ -1,11 +1,11 @@
 ---
-title: Setup son environnement de dev pour les Azure Functions
+title: Configurer son environnement de dev pour les Azure Functions
 date: 2022-12-23
 draft: false
-lastmod: 2022-12-23T10:16:36.350Z
-description: Setup son environnement de développement pour les Azure Functions. Les
-  extensions et logiciels à avoir avec les bons settings.
-slug: setup-son-environnement-de-dev-pour-les-azure-functions
+lastmod: 2022-12-23T10:23:20.517Z
+description: Découvrez les extensions et logiciels utiles pour développer des Azure
+  Functions en local.
+slug: configurer-son-environnement-de-dev-pour-les-azure-functions
 keywords:
   - Azure Functions
   - Extensions
