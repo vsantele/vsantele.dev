@@ -2,7 +2,7 @@
 title: Configurer Key Vault pour les Azure Functions en 3   minutes
 date: 2023-01-27T11:22:52.278Z
 draft: false
-lastmod: 2023-01-27T11:26:01.457Z
+lastmod: 2023-01-27T13:06:55.320Z
 description: Les étapes à suivre pour protéger vos secrets avec Azure Key Vault dans vos
   Azure Functions sans modifier votre code.
 series:
@@ -17,6 +17,7 @@ keywords:
 slug: configurer-key-vault-pour-les-azure-functions-en-3-minutes
 images:
   - /img/2023/01/Azure-Functions-KeyVault-Corgi.webp
+  - /img/2023/01/Azure-Functions-KeyVault-Corgi.png
 ---
 {{< figure src="/img/2023/01/Azure-Functions-KeyVault-Corgi.webp" width="800" >}}
 
