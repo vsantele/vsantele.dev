@@ -42,9 +42,9 @@ params:
       weight: 3
       url: "https://www.linkedin.com/in/victor-santele/"
 
-  matomo:
-    siteID: 1
-    serverURL: matomo.vsantele.dev
+  plausibleAnalytics:
+    domain: "vsantele.dev"
+    serverURL: "stats.vsantele.dev"
 
   customCSS:
     - "css/custom.css"
