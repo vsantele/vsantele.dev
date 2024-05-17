@@ -25,16 +25,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.101.0
+      HUGO_VERSION: 0.126.1
     steps:
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "^1.22.3"
       - name: Install Hugo CLI
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
+      - name: Install deps
+        run: |
+          hugo mod get &&
+          npm install --omit=dev
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -44,7 +51,7 @@ jobs:
           hugo \
             --minify
       - name: Upload build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: public
@@ -55,7 +62,7 @@ jobs:
     needs: build
     steps:
       - name: Download build result for job build
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build
           path: public
