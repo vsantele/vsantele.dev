@@ -94,3 +94,7 @@ module:
       target: i18n
     - source: archetypes
       target: archetypes
+
+markup:
+  highlight:
+    style: github-dark
