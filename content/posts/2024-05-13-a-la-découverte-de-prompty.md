@@ -1,8 +1,8 @@
 ---
 title: À la découverte de Prompty
 date: 2024-05-17T12:00:00.000Z
-draft: true
-lastmod: 2024-05-17T12:46:42.356Z
+draft: false
+lastmod: 2024-05-17T12:48:57.755Z
 description: Découvre ce qu'est Prompty, le petit frère de Promptflow et simplifie ton interaction avec des LLMs
 series:
   - Promptflow
