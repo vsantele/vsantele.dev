@@ -1,0 +1,26 @@
+{
+  "comments": {
+    "dependencies": {
+      "simple-icons": "github.com/schnerring/hugo-mod-json-resume"
+    },
+    "devDependencies": {
+      "husky": "github.com/schnerring/hugo-mod-json-resume",
+      "lint-staged": "github.com/schnerring/hugo-mod-json-resume",
+      "markdownlint-cli": "github.com/schnerring/hugo-mod-json-resume",
+      "prettier": "github.com/schnerring/hugo-mod-json-resume",
+      "prettier-plugin-go-template": "github.com/schnerring/hugo-mod-json-resume"
+    }
+  },
+  "dependencies": {
+    "simple-icons": "^11.14.0"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "markdownlint-cli": "^0.40.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-go-template": "^0.0.15"
+  },
+  "name": "vsantele.dev",
+  "version": "0.1.0"
+}

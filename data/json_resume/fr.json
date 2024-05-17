@@ -1,0 +1,210 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Victor Santelé",
+    "label": "Étudiant Unamur - Master Informatique Finalité Data Science",
+    "image": "",
+    "phone": "",
+    "url": "https://vsantele.dev",
+    "summary": "Étudiant en master Informatique avec une finalité en Data Science à UNamur. Aspirant Data Engineer",
+    "location": {
+      "address": "Mouscron, Belgique"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "victor-santele",
+        "url": "https://www.linkedin.com/in/victor-santele/"
+      },
+      {
+        "network": "GitHub",
+        "username": "vsantele",
+        "url": "https://github.com/vsantele"
+      },
+      {
+        "network": "Twitter",
+        "username": "vsantele",
+        "url": "https://twitter.com/vsantele"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "SecondSquare",
+      "position": "Étudiant développeur",
+      "startDate": "2023-09-30",
+      "highlights": [
+        "Génération de fichiers audio via Azure Ai Speech",
+        "Création d'un chatbot pour apprendre le permis de conduire belge grâce à promptflow",
+        "Gestion et indexation des données relatives à la réglementation et à la théorie du Code de la route",
+        "Mise en place d'un système de feedback pour améliorer la pertinence des réponses",
+        "Intégration du chatbot dans le site web côté front-end (Angular) et back-end (Asp.Net)"
+      ],
+      "summary": "Ajout de fonctionnalités sur le site permis-b.be notamment le développement d'un chatbot intelligent grâce à l'IA Générative de bout en bout.",
+      "url": "https://permis-b.be",
+      "location": "Belgique"
+    },
+    {
+      "name": "DatasPilot ",
+      "position": "Étudiant développeur Web",
+      "startDate": "2023-03-31",
+      "endDate": "2023-12-31",
+      "highlights": [
+        "Mise en place du projet afin d'optimiser l'expérience développeur",
+        "Choix de la stack technique afin d'optimiser le temps de développement via la mise en commun d'un template unique aux différents projets",
+        "Accélération du temps de traitement des factures envoyées par les fournisseurs depuis une adresse e-mail via une Azure Logic Apps, d'Azure Functions et d'Azure Ai Document Intelligence.",
+        "Déploiement des applications sur différents VPS via Docker",
+        "Sécurisation des VPS"
+      ],
+      "summary": "Développement de système de gestion d'entreprise, d'événementielle, et d'un funérarium grâce à NodeJs, NextJS, Prisma, Postgres, tRPC, Express, Typescript, Azure AI et Azure Functions.",
+      "url": "https://dataspilot.be",
+      "location": "Belgique"
+    },
+    {
+      "name": "MIC - Meet Innovate Create",
+      "position": "Étudiant développeur",
+      "startDate": "2022-08-31",
+      "endDate": "2022-08-31",
+      "highlights": [
+        "Création d'un outil d'authentification à reconnaissance  faciale via Azure AI Vision",
+        "Automatisation d'une machine à café via Azure IoT Central couplée à la reconnaissance faciale afin de préparer le café de l'utilisateur en arrivant devant la machine",
+        "Création d'un démonstrateur d'extraction d'informations depuis une image grâce à Azure AI Vision et Azure Functions"
+      ],
+      "summary": "Création de plusieurs projets portant sur les nouvelles technologies pour des démonstrations techniques. Notamment sur l'IA, l'IoT et le serverless via les services d'Azure, typescript et dotnet.",
+      "url": "https://www.mic-belgique.be",
+      "location": "Mons, Région wallonne, Belgique"
+    },
+    {
+      "name": "MIC - Meet Innovate Create",
+      "position": "Stage en développement",
+      "startDate": "2022-02-28",
+      "endDate": "2022-05-31",
+      "highlights": [
+        "Conception de l'interface utilisateur",
+        "Développement d'un algorithme d'optimisation via les données fournis par le client",
+        "Optimisation de la création de parcelles dans l'application via les données cadastrales de la région wallonne"
+      ],
+      "summary": "Conception et réalisation d'un outil Web d'optimisation de champs en permaculture avec React, TS, Asp.Net, C#, MongoDB, Leaflet",
+      "url": "https://www.mic-belgique.be",
+      "location": "Mons, Région wallonne, Belgique",
+      "description": "Projet pour le client Permatechnics"
+    }
+  ],
+  "volunteer": [],
+  "projects": [
+    {
+      "name": "Ajout d'AI sur Looping",
+      "description": "Ajout de computer vision",
+      "startDate": "2023-11-22",
+      "endDate": "2023-11-24",
+      "entity": "Looping",
+      "roles": ["Développeur AI"],
+      "url": "https://looping.green",
+      "type": "Projet Professionel",
+      "highlights": [
+        "Entrainement d'un modèle de classification d'images de déchets ménagers via Azure AI Vision",
+        "Intégration du modèle dans l'API de l'application mobile via Firebase"
+      ]
+    },
+    {
+      "name": "BeerMoji",
+      "description": "Application Android pour noter les bières que l'on boit via un Emoji",
+      "startDate": "2021-01-25",
+      "type": "Projet personnel",
+      "highlights": [
+        "Création d'une application mobile",
+        "Utilisation de Flutter",
+        "Découverte de la mise en production d'une application mobile"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=wtf.wolfvic.beermoji",
+      "roles": ["Créateur"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université de Namur",
+      "area": "Informatique",
+      "studyType": "Master en informatique à finalité en Data Science",
+      "startDate": "2022-09-30",
+      "endDate": "2025-06-30",
+      "score": "",
+      "courses": [],
+      "url": "https://directory.unamur.be/teaching/programmes/802M/2023"
+    },
+    {
+      "institution": "Haute École de Namur-Liège-Luxembourg (Hénallux)",
+      "area": "Informatique",
+      "studyType": "Bachelier Informatique de Gestion",
+      "startDate": "2019-09-30",
+      "endDate": "2022-06-30",
+      "score": "Grande distinction",
+      "courses": [],
+      "url": "https://paysage.henallux.be/fr/cursus/6/2021"
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "[DP-420] Microsoft Certified: Azure Cosmos DB Developer Specialty",
+      "issuer": "Microsoft",
+      "endDate": "2024-07-31",
+      "startDate": "2023-07-31",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/E8A027B4C255A39A"
+    },
+    {
+      "name": "[AZ-204] Microsoft Certified: Azure Developer Associate",
+      "issuer": "Microsoft",
+      "endDate": "2024-12-31",
+      "startDate": "2022-12-31",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/D23A9F46721F6C75?sharingId"
+    },
+    {
+      "name": "[DP-100] Microsoft Certified: Azure Data Scientist Associate",
+      "issuer": "Microsoft",
+      "endDate": "2024-02-28",
+      "startDate": "2023-02-28",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/F1A21A2AF575853?sharingId=EAD24F80706DCC60"
+    },
+    {
+      "name": "Microsoft Applied Skills: Créer une solution Azure AI Vision",
+      "issuer": "Microsoft",
+      "startDate": "2024-01-31",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/ABFD379AD4AD0758?sharingId"
+    },
+    {
+      "name": " [AZ-900] Microsoft Certified: Azure Fundamentals",
+      "issuer": "Microsoft",
+      "startDate": "2022-06-30",
+      "url": "https://www.credly.com/badges/d9ac28c5-ce8c-4f96-8b03-a401a689dadc?source=linked_in_profile"
+    },
+    {
+      "name": "[AI-900] Microsoft Certified: Azure AI Fundamentals",
+      "issuer": "Microsoft",
+      "startDate": "2022-06-30",
+      "url": "https://www.credly.com/badges/1bc79e8d-4d31-4fdc-bba0-4af917c9a0d3?source=linked_in_profile"
+    },
+    {
+      "name": "[DP-900] Microsoft Certified: Azure Data Fundamentals",
+      "issuer": "Microsoft",
+      "startDate": "2022-07-31",
+      "url": "https://www.credly.com/badges/ecc55a0a-c906-4cd8-9899-1cbf63f00d5a?source=linked_in_profile"
+    }
+  ],
+  "publications": [],
+  "languages": [
+    {
+      "language": "fr",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "en",
+      "fluency": "Professional working proficiency"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}

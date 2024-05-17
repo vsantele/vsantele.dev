@@ -18,8 +18,11 @@ params:
   keywords: "belge,blog,projets,personal,developpeur,data,js"
   gravatar: "victor.santele@gmail.com"
 
-  favicon_32: "/images/favicon-32x32.png"
-  favicon_16: "/images/favicon-16x16.png"
+  favicon_32: "/img/logo/logo32.png"
+  favicon_16: "/img/logo/logo16.png"
+  faviconSVG: "/img/logo/logo.svg"
+
+  customCSS: ["css/json_resume_override.css"]
 
   since: 2022
 
@@ -46,9 +49,6 @@ params:
     domain: "vsantele.dev"
     serverURL: "stats.vsantele.dev"
 
-  customCSS:
-    - "css/custom.css"
-
 taxonomies:
   category: categories
   tag: tags
@@ -66,7 +66,31 @@ menu:
     - name: About
       weight: 3
       url: about/
+    - name: CV
+      weight: 4
+      url: resume/
 
 permalinks:
   posts: /posts/:year/:month/:title/
   projets: /projets/:year/:month/:title/
+
+module:
+  imports:
+    - path: "github.com/schnerring/hugo-mod-json-resume"
+  mounts:
+    - source: "node_modules/simple-icons/icons"
+      target: "assets/simple-icons"
+    - source: content
+      target: content
+    - source: static
+      target: static
+    - source: layouts
+      target: layouts
+    - source: data
+      target: data
+    - source: assets
+      target: assets
+    - source: i18n
+      target: i18n
+    - source: archetypes
+      target: archetypes

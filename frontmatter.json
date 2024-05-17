@@ -35,9 +35,7 @@
           "title": "series",
           "name": "series",
           "type": "choice",
-          "choices": [
-            "Azure Functions"
-          ]
+          "choices": ["Azure Functions"]
         },
         {
           "title": "categories",
@@ -48,11 +46,7 @@
           "title": "keywords",
           "name": "keywords",
           "type": "choice",
-          "choices": [
-            "Azure Functions",
-            "Key Vault",
-            "Secrets"
-          ]
+          "choices": ["Azure Functions", "Key Vault", "Secrets"]
         }
       ]
     }
@@ -65,22 +59,9 @@
       "path": "[[workspace]]/content/posts"
     }
   ],
-  "frontMatter.taxonomy.tags": [
-    "Azure",
-    "Azure Blob Storage",
-    "Azure Cosmos DB",
-    "Azure Functions",
-    "Azure Static Web App",
-    "Cognitive Services",
-    "Dotnet",
-    "React",
-    "TypeScript"
-  ],
-  "frontMatter.taxonomy.categories": [
-    "Job"
-  ],
   "frontMatter.content.autoUpdateDate": true,
   "frontMatter.content.fmHighlight": true,
   "frontMatter.framework.startCommand": "hugo server -D",
-  "frontMatter.preview.host": "http://localhost:1313"
+  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.dashboard.openOnStart": false
 }

@@ -15,5 +15,7 @@
     },
     "editor.minimap.enabled": false
   },
-  "frontMatter.dashboard.openOnStart": true
+  "yaml.schemas": {
+    "https://json.schemastore.org/hugo.json": "file:///c%3A/Users/victo/Projects/vsantele.dev/config.yml"
+  }
 }
