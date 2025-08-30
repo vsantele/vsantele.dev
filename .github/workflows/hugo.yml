@@ -25,17 +25,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.126.1
+      HUGO_VERSION: 0.148.2
     steps:
       - uses: actions/setup-go@v5
         with:
-          go-version: "^1.22.3"
+          go-version: "^1.25.0"
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           submodules: recursive
       - name: Install deps
@@ -62,7 +62,7 @@ jobs:
     needs: build
     steps:
       - name: Download build result for job build
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: build
           path: public
