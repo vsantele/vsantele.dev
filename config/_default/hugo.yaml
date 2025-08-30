@@ -33,7 +33,7 @@ params:
   info: "Développeur belge étudiant à UNamur"
   description: "Site personnel de Victor Santelé regroupant projets et articles"
   keywords: "belge,blog,projets,personal,developpeur,data,js"
-  gravatar: "victor.santele@gmail.com"
+  avatarUrl: "/img/misc/profile.webp"
 
   favicon_32: "/img/logo/logo32.png"
   favicon_16: "/img/logo/logo16.png"
@@ -54,13 +54,17 @@ params:
       weight: 1
       url: "https://github.com/vsantele"
     - name: Twitter
-      icon: fa fa-twitter fa-2x
+      icon: fa fa-brands fa-x-twitter fa-2x
       weight: 2
       url: "https://twitter.com/vsantele"
     - name: "LinkedIn"
       icon: fa fa-linkedin fa-2x
       weight: 3
       url: "https://www.linkedin.com/in/victor-santele/"
+    - name: "Bluesky"
+      icon: fa fa-brands fa-bluesky fa-2x
+      weight: 4
+      url: "https://bsky.app/profile/vsantele.dev"
 
   plausibleAnalytics:
     domain: "vsantele.dev"
