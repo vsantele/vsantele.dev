@@ -5,11 +5,28 @@ title: "Victor Santelé"
 theme: "hugo-coder"
 defaultcontentlanguage: "fr"
 
-paginate: 20
+pagination:
+  pagerSize: 20
 
 pygmentsstyle: "bw"
 pygmentscodefences: true
 pygmentscodefencesguesssyntax: true
+
+languages:
+  fr:
+    contentDir: content/fr
+    disabled: false
+    languageCode: fr-BE
+    languageDirection: ltr
+    languageName: Français
+    weight: 1
+  en:
+    contentDir: content/en
+    disabled: false
+    languageCode: en-US
+    languageDirection: ltr
+    languageName: English
+    weight: 2
 
 params:
   author: Victor Santelé
@@ -54,21 +71,6 @@ taxonomies:
   tag: tags
   author: authors
   series: series
-
-menu:
-  main:
-    # - name: Projects
-    #   weight: 1
-    #   url: projects/
-    - name: Blog
-      weight: 2
-      url: posts/
-    - name: About
-      weight: 3
-      url: about/
-    - name: CV
-      weight: 4
-      url: resume/
 
 permalinks:
   posts: /posts/:year/:month/:title/

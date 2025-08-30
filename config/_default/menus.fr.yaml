@@ -1,0 +1,10 @@
+main:
+  - name: Blog
+    weight: 2
+    url: posts/
+  - name: À propos
+    weight: 3
+    url: about/
+  - name: CV
+    weight: 4
+    url: resume/

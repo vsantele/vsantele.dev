@@ -62,7 +62,7 @@
 }
 
 .jr-basics__profile--col {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .jr-basics__profile--row {

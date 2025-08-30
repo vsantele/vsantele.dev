@@ -1,0 +1,10 @@
+main:
+  - name: Blog
+    weight: 2
+    url: posts/
+  - name: About
+    weight: 3
+    url: about/
+  - name: Resume
+    weight: 4
+    url: resume/

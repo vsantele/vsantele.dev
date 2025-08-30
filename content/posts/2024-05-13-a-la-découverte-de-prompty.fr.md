@@ -2,7 +2,7 @@
 title: À la découverte de Prompty
 date: 2024-05-17T12:00:00.000Z
 draft: false
-lastmod: 2024-05-17T12:48:57.755Z
+lastmod: 2024-05-17T15:02:23.120Z
 description: Découvre ce qu'est Prompty, le petit frère de Promptflow et simplifie ton interaction avec des LLMs
 series:
   - Promptflow
@@ -67,7 +67,7 @@ Puisque tu sembles impatient, on va commencer à rentrer dans le vif du sujet ! 
 
 ### Prérequis
 
-Pour commencer, il te faut un accès à Python. Le site de Promptflow recommandait la version 3.9 jusqu'à il y a quelques semaines, mais tu peux choisir n'importe quelle version supérieure à 3.8.
+Pour commencer, il te faut un accès à Python. Le site de Promptflow recommandait la version 3.9 jusqu'à il y a quelques semaines, mais tu peux choisir n'importe quelle version supérieure à 3.9.
 Si tu veux suivre de bonnes pratiques et éviter de potentielles onflits avec d'autres packages, tu peux créer un environnement virtuel avec venv ou conda
 
 ```pwsh

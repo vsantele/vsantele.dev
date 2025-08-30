@@ -17,10 +17,11 @@ aliases:
 
 {{< json-resume "projects" >}}
 
+## Certifications
+  
+{{< json-resume "certificates" >}}
+
 ## Education
 
 {{< json-resume "education" >}}
 
-## Certifications
-  
-{{< json-resume "certificates" >}}
