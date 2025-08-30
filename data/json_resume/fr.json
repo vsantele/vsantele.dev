@@ -3,8 +3,9 @@
   "basics": {
     "name": "Victor Santelé",
     "label": "Étudiant Unamur - Master Informatique Finalité Data Science",
-    "image": "",
+    "image": "/img/misc/profile.webp",
     "phone": "",
+    "email": "contact@vsantele.dev",
     "url": "https://vsantele.dev",
     "summary": "Étudiant en master Informatique avec une finalité en Data Science à UNamur. Aspirant Data Engineer",
     "location": {
@@ -25,16 +26,47 @@
         "network": "Twitter",
         "username": "vsantele",
         "url": "https://twitter.com/vsantele"
+      },
+      {
+        "network": "Bluesky",
+        "username": "vsantele",
+        "url": "https://bsky.app/profile/vsantele.dev"
       }
     ]
   },
   "work": [
     {
+      "name": "JetBrains Research",
+      "position": "Étudiant chercheur",
+      "startDate": "2025-02",
+      "endDate": "2025-05",
+      "highlights": [
+        "Création d'un graph pour comprendre les relations entre les différents éléments du contexte",
+        "Réduction de la taille du contexte d'en moyenne 97% avec les mêmes performances"
+      ],
+      "summary": "Stage de recherche dans le cadre de mon master en informatique à l'Université de Namur. J'ai travaillé sur l'amélioration de la pertinence du contexte envoyé à un LLM pour générer des tests unitaires dans le plugin TestSpark afin de réduire la taille du contexte tout en maintenant les performances.",
+      "url": "https://lp.jetbrains.com/research/software-testing/"
+    },
+    {
+      "name": "VSantelé",
+      "position": "Étudiant Indépendant",
+      "startDate": "2024-04",
+      "highlights": [
+        "Amélioration d'un chatbot grâce à un LLM + RAG",
+        "Optimisation des performances du site permis-b.be",
+        "Design et implémentation d'un API scalable et sécurisée pour looping.green",
+        "Automatisation du traitement de factures par mail via Azure en serverless"
+      ],
+      "summary": "Réalisation de plusieurs contrats pour des entreprises variés: Gestion d'entreprise, e-learning, analyse d'images, associations",
+      "url": "https://vsantele.dev",
+      "location": "Belgique"
+    },
+    {
       "name": "SecondSquare",
       "position": "Étudiant développeur",
-      "startDate": "2023-09-30",
+      "startDate": "2023-09",
+      "endDate": "2024-06",
       "highlights": [
-        "Génération de fichiers audio via Azure Ai Speech",
         "Création d'un chatbot pour apprendre le permis de conduire belge grâce à promptflow",
         "Gestion et indexation des données relatives à la réglementation et à la théorie du Code de la route",
         "Mise en place d'un système de feedback pour améliorer la pertinence des réponses",
@@ -45,10 +77,10 @@
       "location": "Belgique"
     },
     {
-      "name": "DatasPilot ",
+      "name": "DatasPilot",
       "position": "Étudiant développeur Web",
-      "startDate": "2023-03-31",
-      "endDate": "2023-12-31",
+      "startDate": "2023-03",
+      "endDate": "2023-12",
       "highlights": [
         "Mise en place du projet afin d'optimiser l'expérience développeur",
         "Choix de la stack technique afin d'optimiser le temps de développement via la mise en commun d'un template unique aux différents projets",
@@ -56,15 +88,15 @@
         "Déploiement des applications sur différents VPS via Docker",
         "Sécurisation des VPS"
       ],
-      "summary": "Développement de système de gestion d'entreprise, d'événementielle, et d'un funérarium grâce à NodeJs, NextJS, Prisma, Postgres, tRPC, Express, Typescript, Azure AI et Azure Functions.",
+      "summary": "Développement de système de gestion d'entreprise personalisé grâce à NodeJs, NextJS, Prisma, Postgres, tRPC, Express, Typescript, Azure AI et Azure Functions.",
       "url": "https://dataspilot.be",
       "location": "Belgique"
     },
     {
       "name": "MIC - Meet Innovate Create",
       "position": "Étudiant développeur",
-      "startDate": "2022-08-31",
-      "endDate": "2022-08-31",
+      "startDate": "2022-08",
+      "endDate": "2022-08",
       "highlights": [
         "Création d'un outil d'authentification à reconnaissance  faciale via Azure AI Vision",
         "Automatisation d'une machine à café via Azure IoT Central couplée à la reconnaissance faciale afin de préparer le café de l'utilisateur en arrivant devant la machine",
@@ -77,8 +109,8 @@
     {
       "name": "MIC - Meet Innovate Create",
       "position": "Stage en développement",
-      "startDate": "2022-02-28",
-      "endDate": "2022-05-31",
+      "startDate": "2022-02",
+      "endDate": "2022-05",
       "highlights": [
         "Conception de l'interface utilisateur",
         "Développement d'un algorithme d'optimisation via les données fournis par le client",
@@ -94,11 +126,12 @@
   "projects": [
     {
       "name": "Ajout d'AI sur Looping",
-      "description": "Ajout de computer vision",
-      "startDate": "2023-11-22",
-      "endDate": "2023-11-24",
-      "entity": "Looping",
-      "roles": ["Développeur AI"],
+      "description": "Ajout de la classification des images automatisée via Azure AI Vision afin d'améliorer l'expérience utilisateur. Looping est une appli qui veut être le Shazam du tri des déchets. Grâce à une photo, elle nous informe comment jeter son déchets pour le valoriser au mieux.",
+      "startDate": "2023-11",
+      "endDate": "2023-11",
+      "roles": [
+        "Développeur AI"
+      ],
       "url": "https://looping.green",
       "type": "Projet Professionel",
       "highlights": [
@@ -109,7 +142,7 @@
     {
       "name": "BeerMoji",
       "description": "Application Android pour noter les bières que l'on boit via un Emoji",
-      "startDate": "2021-01-25",
+      "startDate": "2021-01",
       "type": "Projet personnel",
       "highlights": [
         "Création d'une application mobile",
@@ -117,7 +150,9 @@
         "Découverte de la mise en production d'une application mobile"
       ],
       "url": "https://play.google.com/store/apps/details?id=wtf.wolfvic.beermoji",
-      "roles": ["Créateur"]
+      "roles": [
+        "Créateur"
+      ]
     }
   ],
   "education": [
@@ -125,8 +160,7 @@
       "institution": "Université de Namur",
       "area": "Informatique",
       "studyType": "Master en informatique à finalité en Data Science",
-      "startDate": "2022-09-30",
-      "endDate": "2025-06-30",
+      "startDate": "2022-09",
       "score": "",
       "courses": [],
       "url": "https://directory.unamur.be/teaching/programmes/802M/2023"
@@ -135,8 +169,8 @@
       "institution": "Haute École de Namur-Liège-Luxembourg (Hénallux)",
       "area": "Informatique",
       "studyType": "Bachelier Informatique de Gestion",
-      "startDate": "2019-09-30",
-      "endDate": "2022-06-30",
+      "startDate": "2019-09",
+      "endDate": "2022-06",
       "score": "Grande distinction",
       "courses": [],
       "url": "https://paysage.henallux.be/fr/cursus/6/2021"
@@ -145,49 +179,56 @@
   "awards": [],
   "certificates": [
     {
+      "name": "[DP-600] Microsoft Certified: Fabric Analytics Engineer Associate",
+      "issuer": "Microsoft",
+      "startDate": "2024-06",
+      "endDate": "2026-06",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-gb/VictorSantele-8252/7D4CEEDC76D58DA0?sharingId=EAD24F80706DCC60"
+    },
+    {
       "name": "[DP-420] Microsoft Certified: Azure Cosmos DB Developer Specialty",
       "issuer": "Microsoft",
-      "endDate": "2024-07-31",
-      "startDate": "2023-07-31",
-      "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/E8A027B4C255A39A"
+      "endDate": "2026-07",
+      "startDate": "2023-07",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/E8A027B4C255A39A?sharingId=EAD24F80706DCC60"
     },
     {
       "name": "[AZ-204] Microsoft Certified: Azure Developer Associate",
       "issuer": "Microsoft",
-      "endDate": "2024-12-31",
-      "startDate": "2022-12-31",
-      "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/D23A9F46721F6C75?sharingId"
+      "endDate": "2026-12",
+      "startDate": "2022-12",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/D23A9F46721F6C75?sharingId=EAD24F80706DCC60"
     },
     {
       "name": "[DP-100] Microsoft Certified: Azure Data Scientist Associate",
       "issuer": "Microsoft",
-      "endDate": "2024-02-28",
-      "startDate": "2023-02-28",
+      "endDate": "2026-02",
+      "startDate": "2023-02",
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/F1A21A2AF575853?sharingId=EAD24F80706DCC60"
     },
     {
       "name": "Microsoft Applied Skills: Créer une solution Azure AI Vision",
       "issuer": "Microsoft",
-      "startDate": "2024-01-31",
-      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/ABFD379AD4AD0758?sharingId"
+      "startDate": "2024-01",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/ABFD379AD4AD0758?sharingId=EAD24F80706DCC60"
     },
     {
       "name": " [AZ-900] Microsoft Certified: Azure Fundamentals",
       "issuer": "Microsoft",
-      "startDate": "2022-06-30",
-      "url": "https://www.credly.com/badges/d9ac28c5-ce8c-4f96-8b03-a401a689dadc?source=linked_in_profile"
+      "startDate": "2022-06",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/B64C38CB064F5849?sharingId=EAD24F80706DCC60"
     },
     {
       "name": "[AI-900] Microsoft Certified: Azure AI Fundamentals",
       "issuer": "Microsoft",
-      "startDate": "2022-06-30",
-      "url": "https://www.credly.com/badges/1bc79e8d-4d31-4fdc-bba0-4af917c9a0d3?source=linked_in_profile"
+      "startDate": "2022-06",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/1BDB148D7004DD27?sharingId=EAD24F80706DCC60"
     },
     {
       "name": "[DP-900] Microsoft Certified: Azure Data Fundamentals",
       "issuer": "Microsoft",
-      "startDate": "2022-07-31",
-      "url": "https://www.credly.com/badges/ecc55a0a-c906-4cd8-9899-1cbf63f00d5a?source=linked_in_profile"
+      "startDate": "2022-07",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/CA1B0F0797872411?sharingId=EAD24F80706DCC60"
     }
   ],
   "publications": [],
@@ -205,6 +246,8 @@
   "references": [],
   "meta": {
     "version": "v1.0.0",
-    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
+    "theme": "json-resume-orbit",
+    "themeVariant": 3
   }
 }

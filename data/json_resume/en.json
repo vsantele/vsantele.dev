@@ -1,0 +1,248 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.2.1/schema.json",
+  "basics": {
+    "name": "Victor Santelé",
+    "label": "Student Unamur - Master in Computer Science with a specialization in Data Science",
+    "image": "/img/misc/profile.webp",
+    "phone": "",
+    "email": "contact@vsantele.dev",
+    "url": "https://vsantele.dev",
+    "summary": "Master's student in Computer Science with a specialization in Data Science at UNamur. Aspiring Data Engineer",
+    "location": {
+      "address": "Mouscron, Belgium"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "victor-santele",
+        "url": "https://www.linkedin.com/in/victor-santele/"
+      },
+      {
+        "network": "GitHub",
+        "username": "vsantele",
+        "url": "https://github.com/vsantele"
+      },
+      {
+        "network": "Twitter",
+        "username": "vsantele",
+        "url": "https://twitter.com/vsantele"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "JetBrains Research",
+      "position": "Student Researcher",
+      "startDate": "2025-02",
+      "endDate": "2025-05",
+      "highlights": [
+        "Created a graph to understand relationships between the different elements of the context",
+        "Reduced the context size by an average of 97% while maintaining the same performance"
+      ],
+      "summary": "Research internship as part of my master's in Computer Science at the University of Namur. I worked on improving the relevance of the context sent to an LLM to generate unit tests in the TestSpark plugin, reducing context size while preserving performance.",
+      "url": "https://lp.jetbrains.com/research/software-testing/"
+    },
+    {
+      "name": "VSantelé",
+      "position": "Independent Student",
+      "startDate": "2024-04",
+      "highlights": [
+        "Improved a chatbot using an LLM + RAG",
+        "Optimized the performance of the permis-b.be website",
+        "Designed and implemented an API for looping.green",
+        "Automated invoice processing from email using Azure serverless"
+      ],
+      "summary": "Completed several contracts for various companies: business management, e-learning, image analysis, associations",
+      "url": "https://vsantele.dev",
+      "location": "Belgium"
+    },
+    {
+      "name": "SecondSquare",
+      "position": "Student Developer",
+      "startDate": "2023-09",
+      "highlights": [
+        "Generation of audio files using Azure Ai Speech",
+        "Creation of a chatbot to learn the Belgian driving license through promptflow",
+        "Management and indexing of data related to regulations and the theory of the Highway Code",
+        "Implementation of a feedback system to improve the relevance of responses",
+        "Integration of the chatbot into the website on the front-end (Angular) and back-end (Asp.Net)"
+      ],
+      "summary": "Adding features to the permis-b.be website, including the development of an intelligent chatbot using end-to-end Generative AI.",
+      "url": "https://permis-b.be",
+      "location": "Belgium"
+    },
+    {
+      "name": "DatasPilot",
+      "position": "Web Developer Student",
+      "startDate": "2023-03",
+      "endDate": "2023-12",
+      "highlights": [
+        "Setting up the project to optimize the developer experience",
+        "Choosing the technical stack to optimize development time through the sharing of a unique template for different projects",
+        "Accelerating the processing time of invoices sent by suppliers from an email address using Azure Logic Apps, Azure Functions, and Azure Ai Document Intelligence.",
+        "Deploying applications on different VPSs using Docker",
+        "Securing VPSs"
+      ],
+      "summary": "Development of enterprise management, event management, and funeral home systems using NodeJs, NextJS, Prisma, Postgres, tRPC, Express, Typescript, Azure AI, and Azure Functions.",
+      "url": "https://dataspilot.be",
+      "location": "Belgium"
+    },
+    {
+      "name": "MIC - Meet Innovate Create",
+      "position": "Student Developer",
+      "startDate": "2022-08",
+      "endDate": "2022-08",
+      "highlights": [
+        "Creating a facial recognition authentication tool using Azure AI Vision",
+        "Automating a coffee machine using Azure IoT Central coupled with facial recognition to prepare the user's coffee when they arrive at the machine",
+        "Creating a demonstrator for extracting information from an image using Azure AI Vision and Azure Functions"
+      ],
+      "summary": "Creating several projects focusing on new technologies for technical demonstrations. Particularly on AI, IoT, and serverless using Azure services, TypeScript, and .NET.",
+      "url": "https://www.mic-belgique.be",
+      "location": "Mons, Wallonia, Belgium"
+    },
+    {
+      "name": "MIC - Meet Innovate Create",
+      "position": "Development Intern",
+      "startDate": "2022-02",
+      "endDate": "2022-05",
+      "highlights": [
+        "Designing the user interface",
+        "Developing an optimization algorithm using data provided by the client",
+        "Optimizing the creation of plots in the application using cadastral data from the Walloon region"
+      ],
+      "summary": "Designing and implementing a Web tool for optimizing fields in permaculture using React, TS, Asp.Net, C#, MongoDB, Leaflet",
+      "url": "https://www.mic-belgique.be",
+      "location": "Mons, Wallonia, Belgium",
+      "description": "Project for the Permatechnics client"
+    }
+  ],
+  "volunteer": [],
+  "projects": [
+    {
+      "name": "Adding AI to Looping",
+      "description": "Adding computer vision",
+      "startDate": "2023-11",
+      "endDate": "2023-11",
+      "entity": "Looping",
+      "roles": [
+        "AI Developer"
+      ],
+      "url": "https://looping.green",
+      "type": "Professional Project",
+      "highlights": [
+        "Training a model for classifying household waste images using Azure AI Vision",
+        "Integration of the model into the mobile application's API using Firebase"
+      ]
+    },
+    {
+      "name": "BeerMoji",
+      "description": "Android application for rating beers using an Emoji",
+      "startDate": "2021-01",
+      "type": "Personal Project",
+      "highlights": [
+        "Creating a mobile application",
+        "Using Flutter",
+        "Learning about the deployment of a mobile application"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=wtf.wolfvic.beermoji",
+      "roles": [
+        "Creator"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Namur",
+      "area": "Computer Science",
+      "studyType": "Master's in Computer Science with a specialization in Data Science",
+      "startDate": "2022-09",
+      "endDate": "2025-06",
+      "score": "",
+      "courses": [],
+      "url": "https://directory.unamur.be/teaching/programmes/802M/2023"
+    },
+    {
+      "institution": "Haute École de Namur-Liège-Luxembourg (Hénallux)",
+      "area": "Computer Science",
+      "studyType": "Bachelor's in Business Informatics",
+      "startDate": "2019-09",
+      "endDate": "2022-06",
+      "score": "With Great Distinction",
+      "courses": [],
+      "url": "https://paysage.henallux.be/fr/cursus/6/2021"
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "[DP-600] Microsoft Certified: Fabric Analytics Engineer Associate",
+      "issuer": "Microsoft",
+      "startDate": "2024-06",
+      "endDate": "2025-06",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-gb/VictorSantele-8252/7D4CEEDC76D58DA0?sharingId=EAD24F80706DCC60"
+    },
+    {
+      "name": "[DP-420] Microsoft Certified: Azure Cosmos DB Developer Specialty",
+      "issuer": "Microsoft",
+      "endDate": "2024-07",
+      "startDate": "2023-07",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/E8A027B4C255A39A?sharingId=EAD24F80706DCC60"
+    },
+    {
+      "name": "[AZ-204] Microsoft Certified: Azure Developer Associate",
+      "issuer": "Microsoft",
+      "endDate": "2024-12",
+      "startDate": "2022-12",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/D23A9F46721F6C75?sharingId=EAD24F80706DCC60"
+    },
+    {
+      "name": "[DP-100] Microsoft Certified: Azure Data Scientist Associate",
+      "issuer": "Microsoft",
+      "endDate": "2024-02",
+      "startDate": "2023-02",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/F1A21A2AF575853?sharingId=EAD24F80706DCC60"
+    },
+    {
+      "name": "Microsoft Applied Skills: Create an Azure AI Vision solution",
+      "issuer": "Microsoft",
+      "startDate": "2024-01",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/ABFD379AD4AD0758?sharingId=EAD24F80706DCC60"
+    },
+    {
+      "name": " [AZ-900] Microsoft Certified: Azure Fundamentals",
+      "issuer": "Microsoft",
+      "startDate": "2022-06",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/B64C38CB064F5849?sharingId=EAD24F80706DCC60"
+    },
+    {
+      "name": "[AI-900] Microsoft Certified: Azure AI Fundamentals",
+      "issuer": "Microsoft",
+      "startDate": "2022-06",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/1BDB148D7004DD27?sharingId=EAD24F80706DCC60"
+    },
+    {
+      "name": "[DP-900] Microsoft Certified: Azure Data Fundamentals",
+      "issuer": "Microsoft",
+      "startDate": "2022-07",
+      "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/CA1B0F0797872411?sharingId=EAD24F80706DCC60"
+    }
+  ],
+  "publications": [],
+  "languages": [
+    {
+      "language": "fr",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "en",
+      "fluency": "Professional working proficiency"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  }
+}
