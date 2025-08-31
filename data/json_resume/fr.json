@@ -140,6 +140,15 @@
       ]
     },
     {
+      "name": "A Vos Marques Prêts",
+      "type": "Projet professionel",
+      "highlights": [
+        "Création d'une application web pour la gestion de réservations de séances de sports",
+        "Collaboration avec l'équipe de l'ASBL afin de répondre aux attentes",
+        "Utilisation de Svelte kit, tailwind, Typescript"
+      ]
+    },
+    {
       "name": "BeerMoji",
       "description": "Application Android pour noter les bières que l'on boit via un Emoji",
       "startDate": "2021-01",

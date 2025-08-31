@@ -136,6 +136,15 @@
       ]
     },
     {
+      "name": "A Vos Marques Prêts",
+      "type": "Professional Project",
+      "highlights": [
+        "Creation of a web application for managing sports session reservations",
+        "Collaboration with the ASBL team to meet expectations",
+        "Use of Svelte kit, tailwind, Typescript"
+      ]
+    },
+    {
       "name": "BeerMoji",
       "description": "Android application for rating beers using an Emoji",
       "startDate": "2021-01",
