@@ -1,3 +1,17 @@
-public
+# Build output
+dist/
+public/
+
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.production
+
+# Astro
+.astro/
+
+# Hugo (legacy)
 .hugo_build.lock
-node_modules
+resources/

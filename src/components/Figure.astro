@@ -1,0 +1,34 @@
+---
+interface Props {
+  src: string;
+  caption?: string;
+  alt?: string;
+}
+
+const { src, caption, alt } = Astro.props;
+---
+
+<figure>
+  <img src={src} alt={alt || caption || ''} />
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  figure {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: var(--text-muted, #666);
+    font-size: 0.9rem;
+  }
+</style>

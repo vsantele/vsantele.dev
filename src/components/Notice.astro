@@ -1,0 +1,53 @@
+---
+interface Props {
+  type?: 'info' | 'warning' | 'tip' | 'note';
+  title?: string;
+}
+
+const { type = 'info', title } = Astro.props;
+---
+
+<div class={`notice notice-${type}`}>
+  {title && <div class="notice-title">{title}</div>}
+  <div class="notice-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .notice {
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid;
+    border-radius: 4px;
+  }
+  
+  .notice-info {
+    background-color: #e7f2fa;
+    border-color: #2196f3;
+  }
+  
+  .notice-warning {
+    background-color: #fff3cd;
+    border-color: #ffc107;
+  }
+  
+  .notice-tip {
+    background-color: #d4edda;
+    border-color: #28a745;
+  }
+  
+  .notice-note {
+    background-color: #f8f9fa;
+    border-color: #6c757d;
+  }
+  
+  .notice-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .notice-content {
+    line-height: 1.6;
+  }
+</style>

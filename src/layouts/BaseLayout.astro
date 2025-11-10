@@ -1,0 +1,292 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Site personnel de Victor Santelé regroupant projets et articles" } = Astro.props;
+const currentPath = Astro.url.pathname;
+const isEnglish = currentPath.startsWith('/en');
+const lang = isEnglish ? 'en' : 'fr';
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Victor Santelé" />
+    <link rel="icon" type="image/svg+xml" href="/img/logo/logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/logo/logo32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/logo/logo16.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>{title} - Victor Santelé</title>
+    
+    <!-- Plausible Analytics -->
+    <script defer data-domain="vsantele.dev" src="https://stats.vsantele.dev/js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <a href={isEnglish ? '/en' : '/'} class="logo">
+            <img src="/img/logo/logo.svg" alt="Victor Santelé" />
+            <span>Victor Santelé</span>
+          </a>
+          <ul class="nav-menu">
+            <li><a href={isEnglish ? '/en/posts' : '/posts'}>{isEnglish ? 'Blog' : 'Blog'}</a></li>
+            <li><a href={isEnglish ? '/en/about' : '/about'}>{isEnglish ? 'About' : 'À propos'}</a></li>
+            <li><a href={isEnglish ? '/en/resume' : '/resume'}>{isEnglish ? 'Resume' : 'CV'}</a></li>
+            <li class="lang-switcher">
+              {isEnglish ? (
+                <a href={currentPath.replace('/en', '')}>FR</a>
+              ) : (
+                <a href={`/en${currentPath}`}>EN</a>
+              )}
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="social-links">
+          <a href="https://github.com/vsantele" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github fa-2x"></i>
+          </a>
+          <a href="https://twitter.com/vsantele" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/victor-santele/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://bsky.app/profile/vsantele.dev" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+            <i class="fa-brands fa-bluesky fa-2x"></i>
+          </a>
+        </div>
+        <p>© 2022-{new Date().getFullYear()} Victor Santelé</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --primary-color: #007bff;
+    --text-color: #333;
+    --text-muted: #666;
+    --bg-color: #fff;
+    --header-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --max-width: 1200px;
+    --content-width: 800px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-color: #e0e0e0;
+      --text-muted: #aaa;
+      --bg-color: #1a1a1a;
+      --header-bg: #2d2d2d;
+      --border-color: #444;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.2s;
+  }
+
+  .nav-menu a:hover {
+    color: var(--primary-color);
+  }
+
+  .lang-switcher a {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+
+  main {
+    flex: 1;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+
+  footer {
+    background-color: var(--header-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+    margin-top: 4rem;
+  }
+
+  .footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-links a {
+    color: var(--text-color);
+    transition: color 0.2s;
+  }
+
+  .social-links a:hover {
+    color: var(--primary-color);
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--primary-color);
+  }
+
+  code {
+    background-color: var(--header-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+
+  pre {
+    background-color: var(--header-bg);
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1rem 0;
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+  }
+
+  ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-menu {
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

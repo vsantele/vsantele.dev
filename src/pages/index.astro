@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts');
+const frenchPosts = allPosts
+  .filter(post => post.id.endsWith('.fr.mdx') && !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+---
+
+<BaseLayout title="Accueil">
+  <div class="hero">
+    <img src="/img/misc/profile.webp" alt="Victor Santelé" class="profile-image" />
+    <h1>Victor Santelé</h1>
+    <p class="subtitle">Développeur belge étudiant à UNamur</p>
+    <p class="description">
+      Étudiant en Master en Informatique avec une spécialisation en Data Science à l'UNamur.
+      Aspirant Data Engineer passionné par l'apprentissage et la découverte de nouvelles technologies.
+    </p>
+  </div>
+
+  <section class="recent-posts">
+    <h2>Articles récents</h2>
+    <div class="posts-list">
+      {frenchPosts.map((post) => (
+        <article class="post-card">
+          <h3>
+            <a href={`/posts/${post.slug || post.id.replace('.fr.mdx', '')}`}>
+              {post.data.title}
+            </a>
+          </h3>
+          <time datetime={post.data.date.toISOString()}>
+            {post.data.date.toLocaleDateString('fr-FR', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time>
+          <p>{post.data.description}</p>
+        </article>
+      ))}
+    </div>
+    <a href="/posts" class="view-all">Voir tous les articles →</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    margin: 3rem 0;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .recent-posts {
+    margin-top: 4rem;
+  }
+
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .post-card {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .post-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-card h3 a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  .post-card h3 a:hover {
+    color: var(--primary-color);
+  }
+
+  .post-card time {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .post-card p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .view-all {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+</style>
