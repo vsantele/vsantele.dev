@@ -1,5 +1,5 @@
-# Sample workflow for building and deploying a Hugo site to VPS
-name: Deploy Hugo site to VPS
+# Workflow for building and deploying an Astro site to VPS
+name: Deploy Astro site to VPS
 
 on:
   # Runs on pushes targeting the default branch
@@ -24,37 +24,27 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.148.2
     steps:
-      - uses: actions/setup-go@v5
-        with:
-          go-version: "^1.25.0"
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
         uses: actions/checkout@v5
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          submodules: recursive
-      - name: Install deps
-        run: |
-          hugo mod get &&
-          npm install --omit=dev
-      - name: Build with Hugo
-        env:
-          # For maximum backward compatibility with Hugo modules
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          hugo \
-            --minify
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build with Astro
+        run: npm run build
+      
       - name: Upload build
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: public
+          path: dist
 
   # Deployment job
   deploy:
@@ -65,12 +55,13 @@ jobs:
         uses: actions/download-artifact@v5
         with:
           name: build
-          path: public
+          path: dist
+      
       - name: deploy-via-scp
         uses: horochx/deploy-via-scp@1.1.0
         with:
           # Local file path
-          local: public/*
+          local: dist/*
           # Remote file path
           remote: /var/www/vsantele.dev/
           # Remote server address

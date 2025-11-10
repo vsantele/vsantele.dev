@@ -1,26 +1,21 @@
 {
-  "comments": {
-    "dependencies": {
-      "simple-icons": "github.com/schnerring/hugo-mod-json-resume"
-    },
-    "devDependencies": {
-      "husky": "github.com/schnerring/hugo-mod-json-resume",
-      "lint-staged": "github.com/schnerring/hugo-mod-json-resume",
-      "markdownlint-cli": "github.com/schnerring/hugo-mod-json-resume",
-      "prettier": "github.com/schnerring/hugo-mod-json-resume",
-      "prettier-plugin-go-template": "github.com/schnerring/hugo-mod-json-resume"
-    }
+  "name": "vsantele.dev",
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "simple-icons": "^11.14.0"
+    "@astrojs/mdx": "^4.3.10",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.15.4"
   },
   "devDependencies": {
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "markdownlint-cli": "^0.42.0",
     "prettier": "^3.3.3",
-    "prettier-plugin-go-template": "^0.0.15"
-  },
-  "name": "vsantele.dev",
-  "version": "0.1.0"
+    "prettier-plugin-astro": "^0.14.1"
+  }
 }

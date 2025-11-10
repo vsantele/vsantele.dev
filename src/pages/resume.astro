@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import resumeData from '../data/fr.json';
+
+const { basics, work, education, certificates, projects } = resumeData;
+---
+
+<BaseLayout title="CV">
+  <div class="resume">
+    <h1>CV</h1>
+
+    {basics && (
+      <section class="jr-basics">
+        <div class="jr-basics__item">
+          {basics.image && (
+            <div class="jr-basics__image">
+              <img src={basics.image} alt={basics.name} />
+            </div>
+          )}
+          <h2 class="jr-basics__name">{basics.name}</h2>
+          {basics.label && <p class="jr-basics__label">{basics.label}</p>}
+          {basics.summary && <p class="jr-basics__summary">{basics.summary}</p>}
+          <hr />
+          {basics.location && (
+            <div class="jr-basics__location">
+              <p>{basics.location.address}</p>
+            </div>
+          )}
+          {basics.profiles && basics.profiles.length > 0 && (
+            <div class="jr-basics__profile jr-basics__profile--row">
+              {basics.profiles.map((profile) => (
+                <div class="jr-basics__profile-item">
+                  <a href={profile.url} target="_blank" rel="noopener noreferrer">
+                    <span class="jr-basics__profile-icon">
+                      {profile.network === 'LinkedIn' && <i class="fa-brands fa-linkedin"></i>}
+                      {profile.network === 'GitHub' && <i class="fa-brands fa-github"></i>}
+                      {profile.network === 'Twitter' && <i class="fa-brands fa-x-twitter"></i>}
+                    </span>
+                    <span>{profile.username}</span>
+                  </a>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+    )}
+
+    {work && work.length > 0 && (
+      <section class="jr-work">
+        <h2>Expériences</h2>
+        {work.map((job) => (
+          <div class="jr-work__item">
+            <div class="jr__item-meta">
+              <div class="jr-work__position">{job.position}</div>
+              <div class="jr__date-range">
+                {job.startDate} - {job.endDate || 'Présent'}
+              </div>
+            </div>
+            <div class="jr__item-meta">
+              <div class="jr-work__name">
+                {job.url ? (
+                  <a href={job.url} target="_blank" rel="noopener noreferrer">
+                    {job.name}
+                  </a>
+                ) : (
+                  job.name
+                )}
+              </div>
+              {job.location && <div class="jr-work__location">{job.location}</div>}
+            </div>
+            {job.summary && <p>{job.summary}</p>}
+            {job.highlights && job.highlights.length > 0 && (
+              <ul>
+                {job.highlights.map((highlight) => (
+                  <li>{highlight}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </section>
+    )}
+
+    {projects && projects.length > 0 && (
+      <section class="jr-projects">
+        <h2>Projets</h2>
+        {projects.map((project) => (
+          <div class="jr-projects__item">
+            <div class="jr__item-meta">
+              <div class="jr-projects__roles">{project.name}</div>
+              <div class="jr__date-range">
+                {project.startDate} - {project.endDate || 'En cours'}
+              </div>
+            </div>
+            {project.entity && <div class="jr-projects__entity">{project.entity}</div>}
+            {project.description && <p>{project.description}</p>}
+            {project.highlights && project.highlights.length > 0 && (
+              <ul>
+                {project.highlights.map((highlight) => (
+                  <li>{highlight}</li>
+                ))}
+              </ul>
+            )}
+            {project.url && (
+              <p>
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  Voir le projet →
+                </a>
+              </p>
+            )}
+          </div>
+        ))}
+      </section>
+    )}
+
+    {education && education.length > 0 && (
+      <section class="jr-education">
+        <h2>Formation</h2>
+        {education.map((edu) => (
+          <div class="jr-education__item">
+            <div class="jr__item-meta">
+              <div class="jr-education__area">{edu.area}</div>
+              <div class="jr__date-range">
+                {edu.startDate} - {edu.endDate || 'En cours'}
+              </div>
+            </div>
+            <div class="jr-education__institution">
+              {edu.url ? (
+                <a href={edu.url} target="_blank" rel="noopener noreferrer">
+                  {edu.institution}
+                </a>
+              ) : (
+                edu.institution
+              )}
+            </div>
+            {edu.studyType && <p>{edu.studyType}</p>}
+            {edu.score && <p>Score: {edu.score}</p>}
+          </div>
+        ))}
+      </section>
+    )}
+
+    {certificates && certificates.length > 0 && (
+      <section class="jr-certificates">
+        <h2>Certifications</h2>
+        {certificates.map((cert) => (
+          <div class="jr-certificates__item">
+            <div class="jr__item-meta">
+              <div class="jr-certificates__name">{cert.name}</div>
+              {cert.date && <div class="jr__date">{cert.date}</div>}
+            </div>
+            {cert.issuer && <div class="jr-certificates__issuer">{cert.issuer}</div>}
+            {cert.url && (
+              <p>
+                <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                  Voir la certification →
+                </a>
+              </p>
+            )}
+          </div>
+        ))}
+      </section>
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .resume {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  section {
+    margin: 3rem 0;
+  }
+
+  section h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  /* Basics section */
+  .jr-basics__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .jr-basics__image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .jr-basics__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .jr-basics__name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.75rem;
+  }
+
+  .jr-basics__label,
+  .jr-basics__summary {
+    margin-top: 0.75rem;
+  }
+
+  .jr-basics__item hr {
+    margin: 1.5rem auto;
+    width: 50%;
+  }
+
+  .jr-basics__profile {
+    display: flex;
+  }
+
+  .jr-basics__profile--row {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .jr-basics__profile-item {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+  }
+
+  .jr-basics__profile-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .jr-basics__profile-icon {
+    padding: 0 0.75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Work, Projects, Education sections */
+  .jr-work__item,
+  .jr-projects__item,
+  .jr-education__item,
+  .jr-certificates__item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+
+  .jr__item-meta {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .jr__item-meta > div {
+    flex: 1 0 50%;
+  }
+
+  .jr-work__position,
+  .jr-education__area,
+  .jr-projects__roles,
+  .jr-certificates__name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .jr__date-range,
+  .jr__date,
+  .jr-work__location,
+  .jr-projects__entity {
+    flex-grow: 1;
+    text-align: right;
+    color: var(--text-muted);
+  }
+
+  .jr-work__item ul,
+  .jr-projects__item ul {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+  }
+
+  .jr-work__item li,
+  .jr-projects__item li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .jr__item-meta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .jr__date-range,
+    .jr__date,
+    .jr-work__location,
+    .jr-projects__entity {
+      text-align: left;
+    }
+  }
+</style>

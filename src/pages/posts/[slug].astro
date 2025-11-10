@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts
+    .filter(post => post.id.endsWith('.fr.mdx'))
+    .map(post => ({
+      params: { slug: post.slug || post.id.replace('.fr.mdx', '') },
+      props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <article class="post">
+    <header class="post-header">
+      <h1>{post.data.title}</h1>
+      <div class="post-meta">
+        <time datetime={post.data.date.toISOString()}>
+          {post.data.date.toLocaleDateString('fr-FR', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })}
+        </time>
+        {post.data.lastmod && (
+          <span class="lastmod">
+            (Mis à jour le {post.data.lastmod.toLocaleDateString('fr-FR', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })})
+          </span>
+        )}
+      </div>
+      {post.data.categories && post.data.categories.length > 0 && (
+        <div class="categories">
+          {post.data.categories.map(cat => (
+            <span class="category">{cat}</span>
+          ))}
+        </div>
+      )}
+    </header>
+    
+    <div class="post-content">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .post-header {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .post-header h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .post-meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .lastmod {
+    font-style: italic;
+  }
+
+  .categories {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .category {
+    background-color: var(--header-bg);
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  .post-content {
+    line-height: 1.8;
+  }
+
+  .post-content :global(h2) {
+    margin-top: 3rem;
+  }
+
+  .post-content :global(h3) {
+    margin-top: 2rem;
+  }
+
+  .post-content :global(ul) {
+    list-style-type: disc;
+  }
+
+  .post-content :global(ol) {
+    list-style-type: decimal;
+  }
+
+  .post-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .post-content :global(pre) {
+    overflow-x: auto;
+  }
+</style>
