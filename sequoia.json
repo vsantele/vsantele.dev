@@ -2,7 +2,7 @@
   "$schema": "https://tangled.org/stevedylan.dev/sequoia/raw/main/sequoia.schema.json",
   "siteUrl": "https://vsantele.dev",
   "contentDir": "./content/posts",
-  "imagesDir": "./static/",
+  "imagesDir": "./static/img",
   "publicDir": "./static",
   "outputDir": "./public",
   "publicationUri": "at://did:plc:ju25t3hqce5ifzr3nabbctjp/site.standard.publication/3msksopwnh22u",
