@@ -16,7 +16,7 @@
     "draft": "draft",
     "title": "title"
   },
-  "pathTemplate": "{lang}/posts/{year}/{month}/{slug}",
+  "pathTemplate": "/posts/{year}/{month}/{slug}",
   "publishContent": true,
   "bluesky": {
     "enabled": true
