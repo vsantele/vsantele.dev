@@ -96,10 +96,13 @@ jobs:
           ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" 'bash -s' <<'EOF'
           set -euo pipefail
           target=/var/www/vsantele.dev
-          rm -rf "$target.new" "$target.old"
-          mkdir -p "$target.new"
-          tar -xzf /tmp/site.tar.gz -C "$target.new"
-          mv "$target" "$target.old"
-          mv "$target.new" "$target"
-          rm -rf "$target.old" /tmp/site.tar.gz
+          staging=$(mktemp -d)
+          trap 'rm -rf "$staging" /tmp/site.tar.gz' EXIT
+          tar -xzf /tmp/site.tar.gz -C "$staging"
+          if command -v rsync >/dev/null 2>&1; then
+            rsync -a --delete "$staging"/ "$target"/
+          else
+            find "$target" -mindepth 1 -delete
+            cp -a "$staging"/. "$target"/
+          fi
           EOF
