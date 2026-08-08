@@ -66,12 +66,8 @@ jobs:
         with:
           name: build
           path: public
-      - name: load priv key
-        run: |
-          mkdir $HOME/.ssh/
-          touch $HOME/.ssh/known_hosts
-          ssh-keyscan -H "${{ secrets.HOST }}" > $HOME/.ssh/known_hosts
-          echo "${{ secrets.SSHKEY }}" > $HOME/.ssh/id_ed25519
-          chmod 400 $HOME/.ssh/id_ed25519
       - name: upload to vps
-        run: scp -i $HOME/.ssh/id_ed25519 -r public/* -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/var/www/vsantele.dev/
+        run: |
+          echo -e "${{ secrets.SSHKEY }}" >__TEMP_INPUT_KEY_FILE
+          chmod 600 __TEMP_INPUT_KEY_FILE
+          scp -i __TEMP_INPUT_KEY_FILE -P ${{ secrets.PORT }} -r public/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/var/www/vsantele.dev/
