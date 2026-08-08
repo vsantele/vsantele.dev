@@ -67,7 +67,16 @@ jobs:
           name: build
           path: public
       - name: upload to vps
+        env:
+          SSHKEY: ${{ secrets.SSHKEY }}
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
         run: |
-          echo -e "${{ secrets.SSHKEY }}" >__TEMP_INPUT_KEY_FILE
-          chmod 600 __TEMP_INPUT_KEY_FILE
-          scp -i __TEMP_INPUT_KEY_FILE -P ${{ secrets.PORT }} -r public/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/var/www/vsantele.dev/
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SSHKEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H -p "$PORT" "$HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          chmod 600 ~/.ssh/known_hosts
+          scp -i ~/.ssh/deploy_key -P "$PORT" -r public/* "$USERNAME@$HOST:/var/www/vsantele.dev/"
