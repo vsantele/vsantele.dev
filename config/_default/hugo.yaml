@@ -3,7 +3,6 @@ locale: "fr-BE"
 title: "Victor Santelé"
 theme: "hugo-coder"
 defaultcontentlanguage: "fr"
-defaultContentLanguageInSubdir: true
 
 pagination:
   pagerSize: 20
@@ -75,6 +74,7 @@ params:
   plausibleAnalytics:
     domain: "vsantele.dev"
     serverURL: "stats.vsantele.dev"
+  atproto: {}
 
 taxonomies:
   category: categories

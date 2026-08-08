@@ -22,6 +22,6 @@
     "enabled": true
   },
   "ui": {
-    "components": "components"
+    "components": "assets/js"
   }
 }

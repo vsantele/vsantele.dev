@@ -1,0 +1,23 @@
+{{- if isset .Site.Params "atproto" -}}
+  {{- if eq (.Params.disableComments | default false) false -}}
+    <style>
+      :root {
+        .colorscheme-dark {
+          --sequoia-border-radius: 12px;
+          --sequoia-bg-color: #212121;
+          --sequoia-fg-color: #F5F3EF;
+          --sequoia-border-color: #333;
+          --sequoia-secondary-color: #8B7355;
+        }
+      }
+    </style>
+    <sequoia-comments ></sequoia-comments>
+    {{ if hugo.IsServer }}
+      {{ $script := resources.Get "js/sequoia-comments.js" }}
+      <script type="module" src="{{ $script.RelPermalink }}"></script>
+    {{ else }}
+      {{ $script := resources.Get "js/sequoia-comments.js" | resources.Minify | resources.Fingerprint }}
+      <script type="module" src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+    {{ end }}
+  {{- end -}}
+{{- end -}}
