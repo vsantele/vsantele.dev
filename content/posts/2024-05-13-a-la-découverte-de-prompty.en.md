@@ -1,8 +1,8 @@
 ---
 title: Discover Prompty
 date: 2024-05-17T12:00:00.000Z
-draft: false
-lastmod: 2024-05-21T17:19:12.655Z
+draft: "false"
+lastmod: 2026-08-08T11:40:29.599Z
 description: Discover Prompty, Promptflow's little brother, and simplify your interaction with LLMs.
 series:
   - Promptflow
@@ -18,8 +18,10 @@ type: posts
 slug: discover-prompty
 authors:
   - Victor Santelé
+image: ./img/2024/05/superCorgiExtended.webp
 images:
   - /img/2024/05/superCorgiExtended.webp
+atUri: at://did:plc:ju25t3hqce5ifzr3nabbctjp/site.standard.document/3mskvixwabk2u
 ---
 
 - [Introduction](#introduction)

@@ -1,8 +1,8 @@
 ---
 title: À la découverte de Prompty
 date: 2024-05-17T12:00:00.000Z
-draft: false
-lastmod: 2024-05-17T15:02:23.120Z
+draft: "false"
+lastmod: 2026-08-08T12:33:06.996Z
 description: Découvre ce qu'est Prompty, le petit frère de Promptflow et simplifie ton interaction avec des LLMs
 series:
   - Promptflow
@@ -18,8 +18,10 @@ type: posts
 slug: a-la-decouverte-de-prompty
 authors:
   - Victor Santelé
+image: ./img/2024/05/superCorgiExtended.webp
 images:
   - /img/2024/05/superCorgiExtended.webp
+atUri: at://did:plc:ju25t3hqce5ifzr3nabbctjp/site.standard.ocument/3mskvixt7ls2u
 ---
 
 - [Introduction](#introduction)

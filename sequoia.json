@@ -1,0 +1,27 @@
+{
+  "$schema": "https://tangled.org/stevedylan.dev/sequoia/raw/main/sequoia.schema.json",
+  "siteUrl": "https://vsantele.dev",
+  "contentDir": "./content/posts",
+  "imagesDir": "./static/",
+  "publicDir": "./static",
+  "outputDir": "./public",
+  "publicationUri": "at://did:plc:ju25t3hqce5ifzr3nabbctjp/site.standard.publication/3msksopwnh22u",
+  "frontmatter": {
+    "publishDate": "date",
+    "coverImage": "image",
+    "tags": "categories",
+    "slugField": "slug",
+    "updatedAt": "lastmod",
+    "description": "description",
+    "draft": "draft",
+    "title": "title"
+  },
+  "pathTemplate": "{lang}/posts/{year}/{month}/{slug}",
+  "publishContent": true,
+  "bluesky": {
+    "enabled": true
+  },
+  "ui": {
+    "components": "components"
+  }
+}

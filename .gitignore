@@ -1,3 +1,5 @@
 public
 .hugo_build.lock
 node_modules
+.sequoia-state.json
+resources/_gen

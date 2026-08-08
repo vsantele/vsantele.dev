@@ -14,6 +14,7 @@ categories:
 externalLink: ""
 series: []
 lastmod: 2022-10-08T17:03:34.920Z
+atUri: "at://did:plc:ju25t3hqce5ifzr3nabbctjp/site.standard.document/3mskviy5tgs2u"
 ---
 
 Il y a quelques semaines, j'ai eu mon premier cours de programmation fonctionnelle à l’université. On voit les principes via [Haskell](https://fr.wikipedia.org/wiki/Haskell). C’est un langage avec une syntaxe assez différente comparé au C ou JavaScript. On a vu, en exemple, une fonction pour effectuer un [quicksort](https://fr.wikipedia.org/wiki/Tri_rapide) sur un tableau de nombre.

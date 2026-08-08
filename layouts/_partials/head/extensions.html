@@ -1,0 +1,7 @@
+{{ if .Params.atUri }}
+  {{ with .Params.atUri }}
+    <link rel="site.standard.document" href="{{ . | safeURL }}">
+  {{ end }}
+{{ end }}
+<link rel="site.standard.publication"
+  href="at://did:plc:ju25t3hqce5ifzr3nabbctjp/site.standard.publication/3msksopwnh22u" />
