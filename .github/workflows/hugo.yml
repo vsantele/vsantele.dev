@@ -25,17 +25,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.148.2
+      HUGO_VERSION: 0.164.0
     steps:
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with:
-          go-version: "^1.25.0"
+          go-version-file: "go.mod"
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           submodules: recursive
       - name: Install deps
@@ -51,7 +51,7 @@ jobs:
           hugo \
             --minify
       - name: Upload build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build
           path: public
@@ -62,24 +62,16 @@ jobs:
     needs: build
     steps:
       - name: Download build result for job build
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: build
           path: public
-      - name: deploy-via-scp
-        uses: horochx/deploy-via-scp@1.1.0
-        with:
-          # Local file path
-          local: public/*
-          # Remote file path
-          remote: /var/www/vsantele.dev/
-          # Remote server address
-          host: ${{ secrets.HOST }}
-          # Remote server port
-          port: ${{ secrets.PORT }}
-          # Remote server user
-          user: ${{ secrets.USERNAME }}
-          # Remote server private key
-          key: ${{ secrets.SSHKEY }}
-          # Ensure the existance of the remote file path
-          ensureRemote: true
+      - name: load priv key
+        run: |
+          mkdir $HOME/.ssh/
+          touch $HOME/.ssh/known_hosts
+          ssh-keyscan -H "${{ secrets.HOST }}" > $HOME/.ssh/known_hosts
+          echo "${{ secrets.SSHKEY }}" > $HOME/.ssh/id_ed25519
+          chmod 400 $HOME/.ssh/id_ed25519
+      - name: upload to vps
+        run: scp -i $HOME/.ssh/id_ed25519 -r public/* -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/var/www/vsantele.dev/
