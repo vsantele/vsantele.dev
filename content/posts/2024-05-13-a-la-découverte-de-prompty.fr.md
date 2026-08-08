@@ -2,7 +2,7 @@
 title: À la découverte de Prompty
 date: 2024-05-17T12:00:00.000Z
 draft: "false"
-lastmod: 2026-08-08T12:33:06.996Z
+lastmod: 2026-08-08T13:29:03.428Z
 description: Découvre ce qu'est Prompty, le petit frère de Promptflow et simplifie ton interaction avec des LLMs
 series:
   - Promptflow
@@ -21,7 +21,7 @@ authors:
 image: ./img/2024/05/superCorgiExtended.webp
 images:
   - /img/2024/05/superCorgiExtended.webp
-atUri: at://did:plc:ju25t3hqce5ifzr3nabbctjp/site.standard.ocument/3mskvixt7ls2u
+atUri: at://did:plc:ju25t3hqce5ifzr3nabbctjp/site.standard.document/3mskvixt7ls2u
 ---
 
 - [Introduction](#introduction)
