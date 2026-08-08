@@ -3,6 +3,7 @@ locale: "fr-BE"
 title: "Victor Santelé"
 theme: "hugo-coder"
 defaultcontentlanguage: "fr"
+defaultContentLanguageInSubdir: true
 
 pagination:
   pagerSize: 20
