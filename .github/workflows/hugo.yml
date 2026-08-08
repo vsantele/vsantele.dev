@@ -50,11 +50,14 @@ jobs:
         run: |
           hugo \
             --minify
+      - name: Create tarball
+        run: tar -czf site.tar.gz -C public .
       - name: Upload build
         uses: actions/upload-artifact@v7
         with:
           name: build
-          path: public
+          path: site.tar.gz
+          compression-level: 0
 
   # Deployment job
   deploy:
@@ -65,13 +68,11 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: build
-          path: public
-      - name: upload to vps
+      - name: Setup SSH
         env:
           SSHKEY: ${{ secrets.SSHKEY }}
           HOST: ${{ secrets.HOST }}
           PORT: ${{ secrets.PORT }}
-          USERNAME: ${{ secrets.USERNAME }}
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
@@ -79,4 +80,26 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H -p "$PORT" "$HOST" >> ~/.ssh/known_hosts 2>/dev/null
           chmod 600 ~/.ssh/known_hosts
-          scp -i ~/.ssh/deploy_key -P "$PORT" -r public/* "$USERNAME@$HOST:/var/www/vsantele.dev/"
+      - name: Upload to VPS
+        env:
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: |
+          scp -i ~/.ssh/deploy_key -P "$PORT" site.tar.gz "$USERNAME@$HOST:/tmp/site.tar.gz"
+      - name: Extract on VPS
+        env:
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: |
+          ssh -i ~/.ssh/deploy_key -p "$PORT" "$USERNAME@$HOST" 'bash -s' <<'EOF'
+          set -euo pipefail
+          target=/var/www/vsantele.dev
+          rm -rf "$target.new" "$target.old"
+          mkdir -p "$target.new"
+          tar -xzf /tmp/site.tar.gz -C "$target.new"
+          mv "$target" "$target.old"
+          mv "$target.new" "$target"
+          rm -rf "$target.old" /tmp/site.tar.gz
+          EOF
