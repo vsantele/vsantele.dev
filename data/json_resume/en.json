@@ -2,12 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.2.1/schema.json",
   "basics": {
     "name": "Victor Santelé",
-    "label": "Student Unamur - Master in Computer Science with a specialization in Data Science",
+    "label": "AI & Data Developer @ Sparkle.tech",
     "image": "/img/misc/profile.webp",
     "phone": "",
     "email": "",
     "url": "https://vsantele.dev",
-    "summary": "Master's student in Computer Science with a specialization in Data Science at UNamur. Aspiring Data Engineer",
+    "summary": "AI & Data Developer at Sparkle.tech. Interested in data, AI, cloud and infrastructure",
     "location": {
       "address": "Mouscron, Belgium"
     },
@@ -30,6 +30,12 @@
     ]
   },
   "work": [
+    {
+      "name": "Sparkle.tech",
+      "position": "AI & Data Developer",
+      "startDate": "2025-09",
+      "url": "https://sparkle.tech"
+    },
     {
       "name": "JetBrains Research",
       "position": "Student Researcher",
@@ -61,11 +67,11 @@
       "position": "Student Developer",
       "startDate": "2023-09",
       "highlights": [
-        "Generation of audio files using Azure Ai Speech",
+        "Generation of audio files using Azure AI Speech",
         "Creation of a chatbot to learn the Belgian driving license through promptflow",
         "Management and indexing of data related to regulations and the theory of the Highway Code",
         "Implementation of a feedback system to improve the relevance of responses",
-        "Integration of the chatbot into the website on the front-end (Angular) and back-end (Asp.Net)"
+        "Integration of the chatbot into the website on the front-end (Angular) and back-end (ASP.NET)"
       ],
       "summary": "Adding features to the permis-b.be website, including the development of an intelligent chatbot using end-to-end Generative AI.",
       "url": "https://permis-b.be",
@@ -79,11 +85,11 @@
       "highlights": [
         "Setting up the project to optimize the developer experience",
         "Choosing the technical stack to optimize development time through the sharing of a unique template for different projects",
-        "Accelerating the processing time of invoices sent by suppliers from an email address using Azure Logic Apps, Azure Functions, and Azure Ai Document Intelligence.",
+        "Accelerating the processing time of invoices sent by suppliers from an email address using Azure Logic Apps, Azure Functions, and Azure AI Document Intelligence.",
         "Deploying applications on different VPSs using Docker",
         "Securing VPSs"
       ],
-      "summary": "Development of enterprise management, event management, and funeral home systems using NodeJs, NextJS, Prisma, Postgres, tRPC, Express, Typescript, Azure AI, and Azure Functions.",
+      "summary": "Development of enterprise management, event management, and funeral home systems using Node.js, Next.js, Prisma, Postgres, tRPC, Express, TypeScript, Azure AI, and Azure Functions.",
       "url": "https://dataspilot.be",
       "location": "Belgium"
     },
@@ -111,7 +117,7 @@
         "Developing an optimization algorithm using data provided by the client",
         "Optimizing the creation of plots in the application using cadastral data from the Walloon region"
       ],
-      "summary": "Designing and implementing a Web tool for optimizing fields in permaculture using React, TS, Asp.Net, C#, MongoDB, Leaflet",
+      "summary": "Designing and implementing a Web tool for optimizing fields in permaculture using React, TS, ASP.NET, C#, MongoDB, Leaflet",
       "url": "https://www.mic-belgique.be",
       "location": "Mons, Wallonia, Belgium",
       "description": "Project for the Permatechnics client"
@@ -141,7 +147,7 @@
       "highlights": [
         "Creation of a web application for managing sports session reservations",
         "Collaboration with the ASBL team to meet expectations",
-        "Use of Svelte kit, tailwind, Typescript"
+        "Use of SvelteKit, Tailwind, TypeScript"
       ],
       "roles": [
         "Developer"
@@ -222,7 +228,7 @@
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/ABFD379AD4AD0758?sharingId=EAD24F80706DCC60"
     },
     {
-      "name": " [AZ-900] Microsoft Certified: Azure Fundamentals",
+      "name": "[AZ-900] Microsoft Certified: Azure Fundamentals",
       "issuer": "Microsoft",
       "startDate": "2022-06",
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/B64C38CB064F5849?sharingId=EAD24F80706DCC60"

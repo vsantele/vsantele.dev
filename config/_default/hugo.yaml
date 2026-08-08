@@ -1,5 +1,5 @@
 baseURL: "https://vsantele.dev/"
-languageCode: "fr-be"
+locale: "fr-BE"
 title: "Victor Santelé"
 theme: "hugo-coder"
 defaultcontentlanguage: "fr"
@@ -15,23 +15,31 @@ languages:
   fr:
     contentDir: content/fr
     disabled: false
-    languageCode: fr-BE
-    languageDirection: ltr
-    languageName: Français
+    locale: fr-BE
+    direction: ltr
+    label: Français
     weight: 1
+    params:
+      info: "AI & Data Developer chez Sparkle.tech"
+      description: "Site personnel de Victor Santelé regroupant projets et articles"
+      keywords: "belge,blog,projets,personnel,développeur,data,ai,cloud,infrastructure"
   en:
     contentDir: content/en
     disabled: false
-    languageCode: en-US
-    languageDirection: ltr
-    languageName: English
+    locale: en-US
+    direction: ltr
+    label: English
     weight: 2
+    params:
+      info: "AI & Data Developer at Sparkle.tech"
+      description: "Personal website of Victor Santelé with projects and articles"
+      keywords: "belgian,blog,projects,personal,developer,data,ai,cloud,infrastructure"
 
 params:
   author: Victor Santelé
-  info: "Développeur belge étudiant à UNamur"
+  info: "AI & Data Developer chez Sparkle.tech"
   description: "Site personnel de Victor Santelé regroupant projets et articles"
-  keywords: "belge,blog,projets,personal,developpeur,data,js"
+  keywords: "belge,blog,projets,personnel,développeur,data,ai,cloud,infrastructure"
   avatarUrl: "/img/misc/profile.webp"
 
   favicon_32: "/img/logo/logo32.png"

@@ -2,12 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Victor Santelé",
-    "label": "Étudiant Unamur - Master Informatique Finalité Data Science",
+    "label": "AI & Data Developer @ Sparkle.tech",
     "image": "/img/misc/profile.webp",
     "phone": "",
     "email": "",
     "url": "https://vsantele.dev",
-    "summary": "Étudiant en master Informatique avec une finalité en Data Science à UNamur. Aspirant Data Engineer",
+    "summary": "AI & Data Developer chez Sparkle.tech. Intéressé par la data, l'IA, le cloud et l'infrastructure",
     "location": {
       "address": "Mouscron, Belgique"
     },
@@ -36,12 +36,18 @@
   },
   "work": [
     {
+      "name": "Sparkle.tech",
+      "position": "AI & Data Developer",
+      "startDate": "2025-09",
+      "url": "https://sparkle.tech"
+    },
+    {
       "name": "JetBrains Research",
       "position": "Étudiant chercheur",
       "startDate": "2025-02",
       "endDate": "2025-05",
       "highlights": [
-        "Création d'un graph pour comprendre les relations entre les différents éléments du contexte",
+        "Création d'un graphe pour comprendre les relations entre les différents éléments du contexte",
         "Réduction de la taille du contexte d'en moyenne 97% avec les mêmes performances"
       ],
       "summary": "Stage de recherche dans le cadre de mon master en informatique à l'Université de Namur. J'ai travaillé sur l'amélioration de la pertinence du contexte envoyé à un LLM pour générer des tests unitaires dans le plugin TestSpark afin de réduire la taille du contexte tout en maintenant les performances.",
@@ -54,10 +60,10 @@
       "highlights": [
         "Amélioration d'un chatbot grâce à un LLM + RAG",
         "Optimisation des performances du site permis-b.be",
-        "Design et implémentation d'un API scalable et sécurisée pour looping.green",
+        "Design et implémentation d'une API scalable et sécurisée pour looping.green",
         "Automatisation du traitement de factures par mail via Azure en serverless"
       ],
-      "summary": "Réalisation de plusieurs contrats pour des entreprises variés: Gestion d'entreprise, e-learning, analyse d'images, associations",
+      "summary": "Réalisation de plusieurs contrats pour des entreprises variées : gestion d'entreprise, e-learning, analyse d'images, associations",
       "url": "https://vsantele.dev",
       "location": "Belgique"
     },
@@ -70,7 +76,7 @@
         "Création d'un chatbot pour apprendre le permis de conduire belge grâce à promptflow",
         "Gestion et indexation des données relatives à la réglementation et à la théorie du Code de la route",
         "Mise en place d'un système de feedback pour améliorer la pertinence des réponses",
-        "Intégration du chatbot dans le site web côté front-end (Angular) et back-end (Asp.Net)"
+        "Intégration du chatbot dans le site web côté front-end (Angular) et back-end (ASP.NET)"
       ],
       "summary": "Ajout de fonctionnalités sur le site permis-b.be notamment le développement d'un chatbot intelligent grâce à l'IA Générative de bout en bout.",
       "url": "https://permis-b.be",
@@ -84,11 +90,11 @@
       "highlights": [
         "Mise en place du projet afin d'optimiser l'expérience développeur",
         "Choix de la stack technique afin d'optimiser le temps de développement via la mise en commun d'un template unique aux différents projets",
-        "Accélération du temps de traitement des factures envoyées par les fournisseurs depuis une adresse e-mail via une Azure Logic Apps, d'Azure Functions et d'Azure Ai Document Intelligence.",
+        "Accélération du temps de traitement des factures envoyées par les fournisseurs depuis une adresse e-mail via Azure Logic Apps, Azure Functions et Azure AI Document Intelligence.",
         "Déploiement des applications sur différents VPS via Docker",
         "Sécurisation des VPS"
       ],
-      "summary": "Développement de système de gestion d'entreprise personalisé grâce à NodeJs, NextJS, Prisma, Postgres, tRPC, Express, Typescript, Azure AI et Azure Functions.",
+      "summary": "Développement de systèmes de gestion d'entreprise personnalisés grâce à Node.js, Next.js, Prisma, Postgres, tRPC, Express, TypeScript, Azure AI et Azure Functions.",
       "url": "https://dataspilot.be",
       "location": "Belgique"
     },
@@ -98,11 +104,11 @@
       "startDate": "2022-08",
       "endDate": "2022-08",
       "highlights": [
-        "Création d'un outil d'authentification à reconnaissance  faciale via Azure AI Vision",
+        "Création d'un outil d'authentification à reconnaissance faciale via Azure AI Vision",
         "Automatisation d'une machine à café via Azure IoT Central couplée à la reconnaissance faciale afin de préparer le café de l'utilisateur en arrivant devant la machine",
         "Création d'un démonstrateur d'extraction d'informations depuis une image grâce à Azure AI Vision et Azure Functions"
       ],
-      "summary": "Création de plusieurs projets portant sur les nouvelles technologies pour des démonstrations techniques. Notamment sur l'IA, l'IoT et le serverless via les services d'Azure, typescript et dotnet.",
+      "summary": "Création de plusieurs projets portant sur les nouvelles technologies pour des démonstrations techniques. Notamment sur l'IA, l'IoT et le serverless via les services d'Azure, TypeScript et .NET.",
       "url": "https://www.mic-belgique.be",
       "location": "Mons, Région wallonne, Belgique"
     },
@@ -113,10 +119,10 @@
       "endDate": "2022-05",
       "highlights": [
         "Conception de l'interface utilisateur",
-        "Développement d'un algorithme d'optimisation via les données fournis par le client",
+        "Développement d'un algorithme d'optimisation via les données fournies par le client",
         "Optimisation de la création de parcelles dans l'application via les données cadastrales de la région wallonne"
       ],
-      "summary": "Conception et réalisation d'un outil Web d'optimisation de champs en permaculture avec React, TS, Asp.Net, C#, MongoDB, Leaflet",
+      "summary": "Conception et réalisation d'un outil Web d'optimisation de champs en permaculture avec React, TS, ASP.NET, C#, MongoDB, Leaflet",
       "url": "https://www.mic-belgique.be",
       "location": "Mons, Région wallonne, Belgique",
       "description": "Projet pour le client Permatechnics"
@@ -126,14 +132,14 @@
   "projects": [
     {
       "name": "Ajout d'AI sur Looping",
-      "description": "Ajout de la classification des images automatisée via Azure AI Vision afin d'améliorer l'expérience utilisateur. Looping est une appli qui veut être le Shazam du tri des déchets. Grâce à une photo, elle nous informe comment jeter son déchets pour le valoriser au mieux.",
+      "description": "Ajout de la classification des images automatisée via Azure AI Vision afin d'améliorer l'expérience utilisateur. Looping est une appli qui veut être le Shazam du tri des déchets. Grâce à une photo, elle nous informe comment jeter son déchet pour le valoriser au mieux.",
       "startDate": "2023-11",
       "endDate": "2023-11",
       "roles": [
         "Développeur AI"
       ],
       "url": "https://looping.green",
-      "type": "Projet Professionel",
+      "type": "Projet professionnel",
       "highlights": [
         "Entrainement d'un modèle de classification d'images de déchets ménagers via Azure AI Vision",
         "Intégration du modèle dans l'API de l'application mobile via Firebase"
@@ -141,11 +147,11 @@
     },
     {
       "name": "A Vos Marques Prêts",
-      "type": "Projet professionel",
+      "type": "Projet professionnel",
       "highlights": [
         "Création d'une application web pour la gestion de réservations de séances de sports",
         "Collaboration avec l'équipe de l'ASBL afin de répondre aux attentes",
-        "Utilisation de Svelte kit, tailwind, Typescript"
+        "Utilisation de SvelteKit, Tailwind, TypeScript"
       ],
       "roles": [
         "Développeur"
@@ -173,6 +179,7 @@
       "area": "Informatique",
       "studyType": "Master en informatique à finalité en Data Science",
       "startDate": "2022-09",
+      "endDate": "2025-06",
       "score": "",
       "courses": [],
       "url": "https://directory.unamur.be/teaching/programmes/802M/2023"
@@ -225,7 +232,7 @@
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/ABFD379AD4AD0758?sharingId=EAD24F80706DCC60"
     },
     {
-      "name": " [AZ-900] Microsoft Certified: Azure Fundamentals",
+      "name": "[AZ-900] Microsoft Certified: Azure Fundamentals",
       "issuer": "Microsoft",
       "startDate": "2022-06",
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/B64C38CB064F5849?sharingId=EAD24F80706DCC60"

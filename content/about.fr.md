@@ -1,19 +1,13 @@
 ---
 date: 2022-08-29T17:11:02.708Z
-description: Victor Santelé, Analyse-développeur
+description: Victor Santelé, AI & Data Developer chez Sparkle.tech
 draft: false
-lastmod: 2022-08-30T17:05:12.729Z
-title: A propos
+lastmod: 2026-08-08T00:00:00.000Z
+title: À propos
 ---
 
-Je me présente, Victor Santelé, 24 ans, étudiant diplômé à l'Henallux en Informatique de Gestion en option Data Science.
+Je me présente, Victor Santelé, AI & Data Developer chez [Sparkle.tech](https://sparkle.tech).
 
-Je suis actuellement en en Science Informatique à finalité spécialisée en Data Science à l'UNamur.
-
-Par la suite, je souhaite me lancer dans le monde de la Data Science et plus particulièrement comme Data Engineer.
-
-En dehors de l'informatique, je suis un passionné de bière. J'adore en découvrir, trouver de nouveaux styles et même en brasser.
-
-Je fais également du Tennis de table depuis une dizaine d'années au RCTT Kitch à Mouscron et quand j'ai du temps, j'aime bien faire des tours à vélo aussi bien en VTT que sur route.
+Au quotidien, je construis des solutions autour de la data et de l'IA. Ce sont les deux sujets qui m'intéressent le plus, avec le cloud et l'infrastructure.
 
 J'adore apprendre et découvrir de nouvelles choses, aussi bien en informatique qu'en général.
