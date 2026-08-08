@@ -13,7 +13,6 @@ pygmentscodefencesguesssyntax: true
 
 languages:
   fr:
-    contentDir: content/fr
     disabled: false
     locale: fr-BE
     direction: ltr
@@ -24,7 +23,6 @@ languages:
       description: "Site personnel de Victor Santelé regroupant projets et articles"
       keywords: "belge,blog,projets,personnel,développeur,data,ai,cloud,infrastructure"
   en:
-    contentDir: content/en
     disabled: false
     locale: en-US
     direction: ltr
