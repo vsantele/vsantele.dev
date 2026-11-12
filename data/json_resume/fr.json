@@ -136,9 +136,7 @@
       "description": "Ajout de la classification des images automatisée via Azure AI Vision afin d'améliorer l'expérience utilisateur. Looping est une appli qui veut être le Shazam du tri des déchets. Grâce à une photo, elle nous informe comment jeter son déchet pour le valoriser au mieux.",
       "startDate": "2023-11",
       "endDate": "2023-11",
-      "roles": [
-        "Développeur AI"
-      ],
+      "roles": ["Développeur AI"],
       "url": "https://looping.green",
       "type": "Projet professionnel",
       "highlights": [
@@ -154,9 +152,7 @@
         "Collaboration avec l'équipe de l'ASBL afin de répondre aux attentes",
         "Utilisation de SvelteKit, Tailwind, TypeScript"
       ],
-      "roles": [
-        "Développeur"
-      ]
+      "roles": ["Développeur"]
     },
     {
       "name": "BeerMoji",
@@ -169,9 +165,7 @@
         "Découverte de la mise en production d'une application mobile"
       ],
       "url": "https://play.google.com/store/apps/details?id=wtf.wolfvic.beermoji",
-      "roles": [
-        "Créateur"
-      ]
+      "roles": ["Créateur"]
     }
   ],
   "education": [
@@ -202,7 +196,7 @@
       "name": "[DP-600] Microsoft Certified: Fabric Analytics Engineer Associate",
       "issuer": "Microsoft",
       "startDate": "2024-06",
-      "endDate": "2026-06",
+      "endDate": "2027-06",
       "url": "https://learn.microsoft.com/api/credentials/share/en-gb/VictorSantele-8252/7D4CEEDC76D58DA0?sharingId=EAD24F80706DCC60"
     },
     {
@@ -222,7 +216,7 @@
     {
       "name": "[DP-100] Microsoft Certified: Azure Data Scientist Associate",
       "issuer": "Microsoft",
-      "endDate": "2026-02",
+      "endDate": "2027-02",
       "startDate": "2023-02",
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/F1A21A2AF575853?sharingId=EAD24F80706DCC60"
     },

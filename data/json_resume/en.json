@@ -132,9 +132,7 @@
       "startDate": "2023-11",
       "endDate": "2023-11",
       "entity": "Looping",
-      "roles": [
-        "AI Developer"
-      ],
+      "roles": ["AI Developer"],
       "url": "https://looping.green",
       "type": "Professional Project",
       "highlights": [
@@ -150,9 +148,7 @@
         "Collaboration with the ASBL team to meet expectations",
         "Use of SvelteKit, Tailwind, TypeScript"
       ],
-      "roles": [
-        "Developer"
-      ]
+      "roles": ["Developer"]
     },
     {
       "name": "BeerMoji",
@@ -165,9 +161,7 @@
         "Learning about the deployment of a mobile application"
       ],
       "url": "https://play.google.com/store/apps/details?id=wtf.wolfvic.beermoji",
-      "roles": [
-        "Creator"
-      ]
+      "roles": ["Creator"]
     }
   ],
   "education": [
@@ -198,27 +192,27 @@
       "name": "[DP-600] Microsoft Certified: Fabric Analytics Engineer Associate",
       "issuer": "Microsoft",
       "startDate": "2024-06",
-      "endDate": "2025-06",
+      "endDate": "2027-06",
       "url": "https://learn.microsoft.com/api/credentials/share/en-gb/VictorSantele-8252/7D4CEEDC76D58DA0?sharingId=EAD24F80706DCC60"
     },
     {
       "name": "[DP-420] Microsoft Certified: Azure Cosmos DB Developer Specialty",
       "issuer": "Microsoft",
-      "endDate": "2024-07",
+      "endDate": "2026-07",
       "startDate": "2023-07",
       "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/E8A027B4C255A39A?sharingId=EAD24F80706DCC60"
     },
     {
       "name": "[AZ-204] Microsoft Certified: Azure Developer Associate",
       "issuer": "Microsoft",
-      "endDate": "2024-12",
+      "endDate": "2026-12",
       "startDate": "2022-12",
       "url": "https://learn.microsoft.com/api/credentials/share/en-us/VictorSantele-8252/D23A9F46721F6C75?sharingId=EAD24F80706DCC60"
     },
     {
       "name": "[DP-100] Microsoft Certified: Azure Data Scientist Associate",
       "issuer": "Microsoft",
-      "endDate": "2024-02",
+      "endDate": "2027-02",
       "startDate": "2023-02",
       "url": "https://learn.microsoft.com/api/credentials/share/fr-fr/VictorSantele-8252/F1A21A2AF575853?sharingId=EAD24F80706DCC60"
     },
