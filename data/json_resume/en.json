@@ -34,7 +34,8 @@
       "name": "Sparkle.tech",
       "position": "AI & Data Developer",
       "startDate": "2025-09",
-      "url": "https://sparkle.tech"
+      "url": "https://sparkle.tech",
+      "summary": "Designing and deploying AI and data solutions for clients across tourism, healthcare, real estate and public procurement, from RAG architecture to infrastructure and CI/CD, mainly on Azure and .NET."
     },
     {
       "name": "JetBrains Research",
