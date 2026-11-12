@@ -1,5 +1,5 @@
 module vsantele.dev
 
-go 1.26.5
+go 1.27.4
 
-require github.com/schnerring/hugo-mod-json-resume v0.0.0-20260721110439-24d1f4c5e7a5 // indirect
+require github.com/schnerring/hugo-mod-json-resume v0.0.0-20261020133951-d35d9d00e9bb // indirect
